@@ -11,7 +11,7 @@ tags: [Python, Start with Me]
 
 如果你感兴趣的话，那就继续看下去吧。
 
-应用场景：实现[页面]([http://dblab.xmu.edu.cn/post/bigdata3ppt/]http://dblab.xmu.edu.cn/post/bigdata3ppt/))所有 PPT 的一键下载，以及后续文件名的修改
+应用场景：实现[这个页面](http://dblab.xmu.edu.cn/post/bigdata3ppt/)所有 PPT 的一键下载，以及后续文件名的修改
 
 代码获取：[github](https://github.com/Oreoxmt/Start-with-Me/tree/master/file-process)
 
@@ -73,7 +73,7 @@ for path in content:
 
 在保存了下载所需的链接之后，通过 `requests` 访问下载链接，通过文件读写实现下载。
 
-这里的下载是把整个文件一次性下载到内存里，再保存的，可以考虑用 `requests` 的 `stream=True` 来实现按块下载，就是下载一点存一点，参考[这里]([https://requests.readthedocs.io/en/master/user/advanced/#body-content-workflow](https://requests.readthedocs.io/en/master/user/advanced/#body-content-workflow))。
+这里的下载是把整个文件一次性下载到内存里，再保存的，可以考虑用 `requests` 的 `stream=True` 来实现按块下载，就是下载一点存一点，参考[这里](https://requests.readthedocs.io/en/master/user/advanced/#body-content-workflow)。
 
 ```python
 for info in allinfo:
