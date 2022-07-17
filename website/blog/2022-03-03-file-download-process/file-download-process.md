@@ -11,7 +11,7 @@ tags: [Python, Start with Me]
 
 如果你感兴趣的话，那就继续看下去吧。
 
-应用场景：实现[页面]( [http://dblab.xmu.edu.cn/post/bigdata3ppt/](http://dblab.xmu.edu.cn/post/bigdata3ppt/) )所有 PPT 的一键下载，以及后续文件名的修改
+应用场景：实现[页面]([http://dblab.xmu.edu.cn/post/bigdata3ppt/]http://dblab.xmu.edu.cn/post/bigdata3ppt/))所有 PPT 的一键下载，以及后续文件名的修改
 
 代码获取：[github](https://github.com/Oreoxmt/Start-with-Me/tree/master/file-process)
 

@@ -58,7 +58,7 @@ Oreo 同学最近开始记笔记和写心情了，但是就是不走寻常路偏
 - `source/` 是存储博客正文 Markdown 的目录
 - `themes/` 是存储博客主题源码的目录，现在包含的是官方默认的 Landscape 主题
 
-由于之前 Oreo 已经选取了 [Fluid](fluid-dev.github.io/hexo-fluid-docs/) 作为博客主题，那我们也没有必要保留默认主题了，所以可以直接把 `themes/landscape/` 整个目录删掉。
+由于之前 Oreo 已经选取了 [Fluid](https://fluid-dev.github.io/hexo-fluid-docs/) 作为博客主题，那我们也没有必要保留默认主题了，所以可以直接把 `themes/landscape/` 整个目录删掉。
 
 嗯看起来已经有一个最基本最基本的结构了，Hexo 甚至可以在没有主题的情况下使用 `hexo g` 生成静态网页，只是文件内容全是空的而已... 嗯要不先交个代码？
 
