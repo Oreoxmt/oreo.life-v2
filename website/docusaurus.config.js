@@ -57,13 +57,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      announcementBar: {
+      /*announcementBar: {
         id: 'support-us',
         content: 'Star me on <a target="_blank" rel="noopener noreferrer" href="https://github.com/Oreoxmt">GitHub</a>!',
         backgroundColor: '#fafafa',
         textColor: '#333',
         isCloseable: true,
-      },
+      },*/
       navbar: {
         title: 'Oreo\'s way to Oodi',
         hideOnScroll: true,
