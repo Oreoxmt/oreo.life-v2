@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run a one-line script
+      - name: Algolia Crawler
         run: |
           docker run \
             -e "APPLICATION_ID=${{ secrets.ALGOLIA_APPLICATION_ID }}" \
