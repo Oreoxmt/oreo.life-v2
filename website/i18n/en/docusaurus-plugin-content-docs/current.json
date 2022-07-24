@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Python": {
+    "message": "Python",
+    "description": "The label for category Python in sidebar docs"
+  },
+  "sidebar.docs.category.Applied data science": {
+    "message": "Applied data science",
+    "description": "The label for category Applied data science in sidebar docs"
+  },
+  "sidebar.docs.category.Understanding and visualizing data": {
+    "message": "Understanding and visualizing data",
+    "description": "The label for category Understanding and visualizing data in sidebar docs"
+  },
+  "sidebar.docs.category.Hadoop": {
+    "message": "Hadoop",
+    "description": "The label for category Hadoop in sidebar docs"
+  },
+  "sidebar.docs.category.Game Theory": {
+    "message": "Game Theory",
+    "description": "The label for category Game Theory in sidebar docs"
+  },
+  "sidebar.docs.category.Docker": {
+    "message": "Docker",
+    "description": "The label for category Docker in sidebar docs"
+  },
+  "sidebar.docs.category.Linux": {
+    "message": "Linux",
+    "description": "The label for category Linux in sidebar docs"
+  },
+  "sidebar.docs.category.How-Tos": {
+    "message": "How-Tos",
+    "description": "The label for category How-Tos in sidebar docs"
+  }
+}
