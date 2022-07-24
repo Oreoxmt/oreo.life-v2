@@ -24,7 +24,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    locales: ['zh-Hans', 'en'],
   },
 
   presets: [
@@ -74,6 +74,10 @@ const config = {
         items: [
           {
             type: 'search',
+            position: 'left',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
           {
@@ -134,11 +138,12 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      /*algolia: {
-        appId: '',
-        appKey: '',
-        indexName: '',
-      },*/
+      algolia: {
+        appId: '53EIWM37P4',
+        apiKey: '03b0f5b82bd8cba0585823963bc22295',
+        indexName: 'oreo_blog',
+        contextualSearch: true,
+      },
       docs: {
         sidebar: {
           hideable: true, // make the entire sidebar hideable
