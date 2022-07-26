@@ -3,9 +3,10 @@ name: CI
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
-  build:
+  crawl:
     runs-on: ubuntu-latest
     steps:
       - name: Algolia Crawler Automatic Crawl
