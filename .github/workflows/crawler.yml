@@ -13,9 +13,9 @@ jobs:
         uses: algolia/algoliasearch-crawler-github-actions@v1.1.0
         with:
           crawler-user-id: ${{ secrets.ALGOLIA_CRAWLER_USER_ID }}
-          crawler-api-key: ${{ secrets.ALGOLIA_CRAWLER_API_KEY}}
+          crawler-api-key: ${{ secrets.ALGOLIA_CRAWLER_API_KEY }}
           github-token: ${{ github.token }}
-          crawler-name: ${{ github.repository }} ${{ github.ref }}
+          crawler-name: oreo
           algolia-app-id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
           algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
           site-url: https://v2.oreo.life
