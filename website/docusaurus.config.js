@@ -139,9 +139,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       algolia: {
-        appId: 'JKFDBOQ1CL',
-        apiKey: '924f16c2b3507c3610cc9630d5798d81',
-        indexName: 'oreo_blog',
+        appId: '3EPKB2DNI5',
+        apiKey: '5370345aad92cd043fb553670f26bd0f',
+        indexName: 'oreo',
         contextualSearch: true,
       },
       docs: {
