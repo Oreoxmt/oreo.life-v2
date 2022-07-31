@@ -32,17 +32,11 @@ On October 8, 2021, I was asked a question during a Project Manager interview. T
 
 From the blog, something interesting about Git is:
 
--  > `git-reset` does up to three different things, depending on flags
+-  `git-reset` does up to three different things, depending on flags. For more details, see [git-reset](https://blog.plover.com/prog/git-reset.html).
 
-    For more details, see [git-reset](https://blog.plover.com/prog/git-reset.html).
+-  `git-checkout` is worse.
 
--  > `git-checkout` is worse
-
-    -  `git checkout` a file
-    -  `git checkout` a branch
-    -  `git checkout` a commit
-
--  > The opposite of `git-push` is not `git-pull`, it's `git-fetch`
+-  The opposite of `git-push` is not `git-pull`, it's `git-fetch`.
 
 To learn the Git underlying model, [Mark Dominus](https://blog.plover.com/meta/about-me.html) recommends to read the magic key [Git from the bottom up](https://jwiegley.github.io/git-from-the-bottom-up/). I have already added the link to my reading list 👀.
 
@@ -95,7 +89,7 @@ The default shortcuts are inspired by the [`emacs`](https://www.gnu.org/software
 
 I don't know `readline` before, and I just want to know which shortcuts I can use. But I still add this pages into my reading list 👀.
 
-:::
+:::info quote
 While the obvious way to re-execute a previous command might seem to just bash on the ↑ key until you find the command you want, there are faster and smarter ways to accomplish this.
 :::
 
