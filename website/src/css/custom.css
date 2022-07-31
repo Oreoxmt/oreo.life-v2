@@ -28,3 +28,18 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+html[data-theme="dark"] blockquote {
+  border-left: 3px solid #ced4da;
+  color: #bcc3cc;
+}
+
+blockquote {
+  border-left: 3px solid #ced4da;
+  background-color: transparent;
+  color: #495057;
+  font-size: 100%;
+  margin: 0 0 1rem;
+  padding: 1rem;
+  box-shadow: none;
+}
