@@ -21,6 +21,16 @@ const sidebars = {
     'intro',
     {
       type: 'category',
+      label: 'My Reading List',
+      link:{
+        type: 'generated-index',
+      },
+      items: [
+        'reading-list/git',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Python',
       // Use link to generate index page for each category
       link: {
