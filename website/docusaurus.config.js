@@ -14,6 +14,13 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
 
+  scripts: [
+    {
+      src: 'https://platform.twitter.com/widgets.js',
+      async: true,
+    }
+  ],
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Oreoxmt', // Usually your GitHub org/user name.
