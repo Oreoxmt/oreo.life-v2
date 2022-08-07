@@ -18,6 +18,8 @@ My Reading List from July 16, 2022 to July 31, 2022.
 | [Shell productivity tips and tricks](#shell-tips) | _We will cover some shell features you can leverage to make your shell do more of the work for you._| [Tips & Tricks](/blog/tags/Tips-Tricks) |
 | [6 deprecated Linux commands and the tools you should be using instead](#deprecated-linux-commands) | _Swap your old Linux commands for new and improved alternatives that provide the same functionality, if not more._ | [Tips & Tricks](/blog/tags/Tips-Tricks) |
 
+<!--truncate-->
+
 ## [Things I wish everyone knew about Git (Part I)](https://blog.plover.com/prog/git/tips.html) {#git-part-1}
 
 :::info quote

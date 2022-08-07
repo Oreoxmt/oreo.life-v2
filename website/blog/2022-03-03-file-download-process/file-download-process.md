@@ -1,8 +1,8 @@
 ---
-slug: 生活小技巧 | 一键下载+批量改名
+slug: 2022-03-03-file-download-process
 title: 生活小技巧 | 一键下载+批量改名
 authors: [Oreo]
-tags: [Python, Start with Me]
+tags: [Tips & Tricks]
 ---
 
 # 生活小技巧 | 一键下载+批量改名
@@ -14,6 +14,8 @@ tags: [Python, Start with Me]
 应用场景：实现[这个页面](http://dblab.xmu.edu.cn/post/bigdata3ppt/)所有 PPT 的一键下载，以及后续文件名的修改
 
 代码获取：[github](https://github.com/Oreoxmt/Start-with-Me/tree/master/file-process)
+
+<!--truncate-->
 
 # 一键下载
 
@@ -141,4 +143,4 @@ for name in os.listdir():
 
 通过前面的一系列折腾终于完成了一键下载+批量改名，在下载的文件数量较多时，还可以采用并行的方法，提高效率。
 
-关于并行部分的内容或许会在下次更新....
+关于并行部分的内容或许会在下次更新。

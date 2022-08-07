@@ -1,21 +1,19 @@
 ---
-layout: post
-title: '[轮子再造] 使用 GitHub Actions 自动部署 Hexo 博客 - 上篇'
-excerpt: 一个新轮子。再也不用在本地配置环境啦~
-date: 2020-09-01 19:00:00
-tags:
-- Start with Me
-- GitHub Actions
-- Hexo
+slug: 2021-09-01-deploy-hexo-with-github-actions-1
+title: 轮子再造 | 使用 GitHub Actions 自动部署 Hexo 博客 - 上篇
+authors: [Oreo]
+tags: [GitHub Actions, Hexo, Tips & Tricks]
 ---
 
-# [轮子再造] 使用 GitHub Actions 自动部署 Hexo 博客 - 上篇
+# 轮子再造 | 使用 GitHub Actions 自动部署 Hexo 博客 - 上篇
 
 Oreo 同学最近开始记笔记和写心情了，但是就是不走寻常路偏偏想整一个自己的网站来写博客。正巧之前有一个 oreo.life 的域名，很快就定下来了 Hexo + GitHub Pages + Cloudflare CDN 的方案，Oreo 自己折腾了一段时间，成功部署了现在你看到的博客并在坚持更新，可喜可贺可喜可贺。
 
 但是有个问题，GitHub Pages 对应的 [Repo](https://github.com/Oreoxmt/Oreoxmt.github.io) 存的是渲染过后的 HTML 文件，我们总得有个地方来存原始的 Markdown 文档。于是更新博客首先需要在 `_source` 目录写 Markdown，然后在根目录执行 `hexo generate` 和 `hexo deploy` 更新网站。命令行操作就先不说了，还要研究什么 Node.js、npm 是不是太过分了，在 Windows 配置环境超麻烦的好吗。世界如此美好，我却还要存 node_modules，这样不好，不好。
 
 成，好歹咱也是做过 CI 的，GitHub Actions 也出来一段时间了看起来反响不错，那肯定也可以用 Actions 完成从博客源码到 Pages 部署的完整流程。Google 一搜发现已经有很多很多人做了类似的事情了，但是总有一些小地方不够好看或者是不满足需求，那就只能自己重新造一遍轮子了。
+
+<!--truncate-->
 
 ## Hexo 的网页渲染逻辑
 
@@ -64,7 +62,7 @@ Oreo 同学最近开始记笔记和写心情了，但是就是不走寻常路偏
 
 等等，好像有什么事情没有干...... 哦对当前目录还不是一个 Git repo......
 
-那来吧，先随便写一个 README.md 作为 initial commit 这样：
+那来吧，先随便写一个 `README.md` 作为 initial commit 这样：
 
 ```shell
 $ git init
@@ -136,7 +134,7 @@ $ git commit -a -m "Add fluid theme by submodule"
 
 ### GitHub Actions 的语法
 
-在这里强烈建议先阅读 [官方指南](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow)。本文不会很详细地介绍 Actions 的基础知识。
+在这里强烈建议先阅读 [GitHub Actions 官方指南](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow)。本文不会很详细地介绍 Actions 的基础知识。
 
 <details>
   <summary>官方的 Workflow 配置样例</summary>
