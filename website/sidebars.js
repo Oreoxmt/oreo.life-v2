@@ -110,7 +110,8 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        { type: 'ref', id: 'placeholder' }
+        'how-tos/deploy-openapi-using-netlify',
+        'how-tos/bundle-scripts-using-webpack',
       ],
     }
   ],
