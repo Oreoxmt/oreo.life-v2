@@ -1,6 +1,6 @@
 ---
 slug: 2022-08-07-bundle-scripts-using-webpack
-title: How to Bundle Your Scripts Using webpack
+title: How to Bundle JavaScript Projects Using webpack
 authors: [Oreo]
 tags: [webpack, Tips & Tricks, How-tos]
 ---
