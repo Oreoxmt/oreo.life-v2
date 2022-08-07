@@ -140,6 +140,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['docker'],
       },
       colorMode: {
         respectPrefersColorScheme: true,
