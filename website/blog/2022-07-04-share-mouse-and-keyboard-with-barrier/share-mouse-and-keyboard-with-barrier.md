@@ -1,8 +1,8 @@
 ---
-slug: 生活小技巧 | Barrier：低成本的键鼠共享
+slug: 2022-07-04-share-mouse-and-keyboard-with-barrier
 title: 生活小技巧 | Barrier：低成本的键鼠共享
 authors: [Oreo]
-tags: [Python, Start with Me]
+tags: [Tips & Tricks]
 ---
 
 # 生活小技巧 | Barrier：低成本的键鼠共享
@@ -10,6 +10,8 @@ tags: [Python, Start with Me]
 新一期的生活小技巧分享终于更新啦，这次是社畜奥奥的打工小技巧分享。
 
 如果你需要同时使用多个终端，又不希望两个键盘、两个鼠标来回切换，或者说你只有一个键盘、一个鼠标却想要控制多个终端的话，那这个超级低成本的小技巧就非常适合你啦！
+
+<!--truncate-->
 
 ## 场景介绍
 
