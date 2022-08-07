@@ -1,10 +1,8 @@
 ---
-slug: 2022-08-07-deploy-openapi-using-netlify
-title: How to Deploy an OpenAPI Documentation on Netlify
-authors: [Oreo]
-tags: [GitHub API, OpenAPI, Netlify, Tips & Tricks, How-tos]
+sidebar_label: "Deploy OpenAPI using Netlify"
+title: "How to Deploy an OpenAPI Documentation on Netlify"
+description: "Introduce how to deploy an OpenAPI documentation using GitHub API and `redoc-cli` on Netlify."
 ---
-
 ## Scenario
 
 1. There is an API definition file `open-api-swagger.json` in a private repository `production/api` and I have no write access to it.
