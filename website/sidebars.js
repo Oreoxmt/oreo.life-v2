@@ -21,12 +21,14 @@ const sidebars = {
     'intro',
     {
       type: 'category',
-      label: 'My Reading List',
+      label: 'Reading List',
       link:{
-        type: 'generated-index',
+        type: 'doc',
+        id: 'reading-list/index',
       },
       items: [
         'reading-list/git',
+        'reading-list/tips-tricks',
       ],
     },
     {
