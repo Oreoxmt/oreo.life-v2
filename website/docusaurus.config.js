@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'On my way to Oodi',
   tagline: '"Siempre imaginé que el paraíso sería algún tipo de biblioteca"',
-  url: 'https://oreolife.netlify.app',
+  url: 'https://oreo.life',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -56,6 +56,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-HCWG2900CK',
+          anonymizeIP: true,
+        }
       }),
     ],
   ],

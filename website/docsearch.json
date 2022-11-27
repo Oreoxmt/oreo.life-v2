@@ -1,10 +1,10 @@
 {
     "index_name": "oreo_blog",
     "start_urls": [
-      "https://v2.oreo.life"
+      "https://oreo.life"
     ],
     "sitemap_urls": [
-      "https://v2.oreo.life/sitemap.xml"
+      "https://oreo.life/sitemap.xml"
     ],
     "stop_urls": [
       "/search",
