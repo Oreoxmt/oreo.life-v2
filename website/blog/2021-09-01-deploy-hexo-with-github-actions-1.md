@@ -5,8 +5,6 @@ authors: [Oreo]
 tags: [GitHub Actions, Hexo, Tips & Tricks]
 ---
 
-# 轮子再造 | 使用 GitHub Actions 自动部署 Hexo 博客 - 上篇
-
 Oreo 同学最近开始记笔记和写心情了，但是就是不走寻常路偏偏想整一个自己的网站来写博客。正巧之前有一个 oreo.life 的域名，很快就定下来了 Hexo + GitHub Pages + Cloudflare CDN 的方案，Oreo 自己折腾了一段时间，成功部署了现在你看到的博客并在坚持更新，可喜可贺可喜可贺。
 
 但是有个问题，GitHub Pages 对应的 [Repo](https://github.com/Oreoxmt/Oreoxmt.github.io) 存的是渲染过后的 HTML 文件，我们总得有个地方来存原始的 Markdown 文档。于是更新博客首先需要在 `_source` 目录写 Markdown，然后在根目录执行 `hexo generate` 和 `hexo deploy` 更新网站。命令行操作就先不说了，还要研究什么 Node.js、npm 是不是太过分了，在 Windows 配置环境超麻烦的好吗。世界如此美好，我却还要存 node_modules，这样不好，不好。
