@@ -39,6 +39,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
+        'how-tos/manage-python-project-using-poetry',
         {
           type: 'category',
           label: 'Applied data science',
@@ -112,6 +113,7 @@ const sidebars = {
       items: [
         'how-tos/deploy-openapi-using-netlify',
         'how-tos/bundle-scripts-using-webpack',
+        'how-tos/manage-python-project-using-poetry',
       ],
     }
   ],
