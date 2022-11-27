@@ -1,12 +1,10 @@
 ---
 slug: 2021-07-14-python-wordcloud
-title: Start with Me | 用 Python 制作词云 0 —— 初印象
+title: Start With Me | 用 Python 制作词云 0 —— 初印象
 authors: [Oreo]
 tags: [Python]
 draft: true
 ---
-
-# Start with Me | 用 Python 制作词云 0 —— 初印象
 
 奥利奥同学的新系列，那就开始吧
 
@@ -18,4 +16,3 @@ draft: true
 
 <!--<iframe src="https://nbviewer.jupyter.org/github/Oreoxmt/Start-With-Me/blob/master/Python-%E8%AF%8D%E4%BA%91/Python%E8%AF%8D%E4%BA%910-%E5%88%9D%E5%8D%B0%E8%B1%A1.ipynb" width="100%" height="2000" style="border:none;"></iframe>
 -->
-

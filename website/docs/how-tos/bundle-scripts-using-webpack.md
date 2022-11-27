@@ -4,12 +4,12 @@ title: "How to Bundle Your JavaScript Projects Using webpack"
 description: "Introduce how to bundle your JavaScript projects using webpack."
 ---
 
-## Scenario
-
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
+
+## Scenario
 
 I use [webpack](https://webpack.js.org) to bundle some JS scripts today, see [openapi-scripts/pull/16](https://github.com/Oreoxmt/openapi-scripts/pull/16). The following lists details of the project and reasons for bundling:
 
