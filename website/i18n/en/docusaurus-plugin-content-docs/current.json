@@ -34,5 +34,9 @@
   "sidebar.docs.category.How-Tos": {
     "message": "How-Tos",
     "description": "The label for category How-Tos in sidebar docs"
+  },
+  "sidebar.docs.category.Reading List": {
+    "message": "Reading List",
+    "description": "The label for category Reading List in sidebar docs"
   }
 }
