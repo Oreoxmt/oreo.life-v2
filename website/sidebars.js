@@ -31,6 +31,7 @@ const sidebars = {
         'reading-list/tips-tricks',
       ],
     },
+    'git-wiki',
     {
       type: 'category',
       label: 'Python',
