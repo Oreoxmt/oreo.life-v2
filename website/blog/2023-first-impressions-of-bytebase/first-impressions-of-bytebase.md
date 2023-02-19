@@ -261,42 +261,42 @@ This section describes how to integrate Bytebase with TiDB Cloud.
 
 2. To create an instance in Bytebase, perform the following steps:
 
-  1. Click **Instances** on the top bar and then click **New Instance**. The **Create Instance** page is displayed.
+    1. Click **Instances** on the top bar and then click **New Instance**. The **Create Instance** page is displayed.
 
-  2. Select **TiDB** as the **Instance Type**, enter an **Instance Name**, select the **Environment**, and enter the **Host** and **Port** of your TiDB Cloud cluster.
+    2. Select **TiDB** as the **Instance Type**, enter an **Instance Name**, select the **Environment**, and enter the **Host** and **Port** of your TiDB Cloud cluster.
 
-  ![Integrate: create instance](integrate-create-instance.png)
+    ![Integrate: create instance](integrate-create-instance.png)
 
-  3. Create a new user (`prefix.bytebase`) in TiDB Cloud and fill in the **Username** and **Password** of the user:
+    3. Create a new user (`prefix.bytebase`) in TiDB Cloud and fill in the **Username** and **Password** of the user:
 
-    ```sql
-    CREATE USER 'prefix.bytebase'@'%' IDENTIFIED BY 'YOUR_DB_PWD';
+      ```sql
+      CREATE USER 'prefix.bytebase'@'%' IDENTIFIED BY 'YOUR_DB_PWD';
 
-    GRANT ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, CREATE VIEW,
-    DELETE, DROP, EVENT, EXECUTE, INDEX, INSERT, PROCESS, REFERENCES,
-    SELECT, SHOW DATABASES, SHOW VIEW, TRIGGER, UPDATE, USAGE,
-    LOCK TABLES, REPLICATION CLIENT, REPLICATION SLAVE
-    ON *.* to 'prefix.bytebase'@'%';
-    ```
-  4. Configure the SSL connection of TiDB Cloud. For Serverless Tier clusters, use the **CA Certificate**.
+      GRANT ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, CREATE VIEW,
+      DELETE, DROP, EVENT, EXECUTE, INDEX, INSERT, PROCESS, REFERENCES,
+      SELECT, SHOW DATABASES, SHOW VIEW, TRIGGER, UPDATE, USAGE,
+      LOCK TABLES, REPLICATION CLIENT, REPLICATION SLAVE
+      ON *.* to 'prefix.bytebase'@'%';
+      ```
+    4. Configure the SSL connection of TiDB Cloud. For Serverless Tier clusters, use the **CA Certificate**.
 
-    ![Integrate: configure connection](integrate-configure-connection.png)
+      ![Integrate: configure connection](integrate-configure-connection.png)
 
-  5. Click **Test Connection** and check the connection status.
+    5. Click **Test Connection** and check the connection status.
 
-  6. Once the message `Successfully connected instance` is displayed, click **Create**.
+    6. Once the message `Successfully connected instance` is displayed, click **Create**.
 
 3. Create a new project for TiDB Cloud by performing the following steps:
 
-  1. Click **Projects** on the top bar and then click **New Project**. The **Create Project** page is displayed.
+    1. Click **Projects** on the top bar and then click **New Project**. The **Create Project** page is displayed.
 
-  2. Enter the **Project Name** (`TiDB`) and **Project Key** (`TIDB`), and then click **Create**.
+    2. Enter the **Project Name** (`TiDB`) and **Project Key** (`TIDB`), and then click **Create**.
 
-  3. Click the newly created project, and then click **Transfer in DB**. The **Transfer in database** page is displayed.
+    3. Click the newly created project, and then click **Transfer in DB**. The **Transfer in database** page is displayed.
 
-  4. Select the `gharchive_dev` database and click **Transfer**.
+    4. Select the `gharchive_dev` database and click **Transfer**.
 
-  ![Integrate ](bytebase-integrate-tidb.png)
+    ![Integrate ](bytebase-integrate-tidb.png)
 
 ## Personal thoughts
 
