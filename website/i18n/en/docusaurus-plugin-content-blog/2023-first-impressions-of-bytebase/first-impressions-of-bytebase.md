@@ -265,7 +265,7 @@ This section describes how to integrate Bytebase with TiDB Cloud.
 
     2. Select **TiDB** as the **Instance Type**, enter an **Instance Name**, select the **Environment**, and enter the **Host** and **Port** of your TiDB Cloud cluster.
 
-    ![Integrate: create instance](integrate-create-instance.png)
+      ![Integrate: create instance](integrate-create-instance.png)
 
     3. Create a new user (`prefix.bytebase`) in TiDB Cloud and fill in the **Username** and **Password** of the user:
 
@@ -296,7 +296,7 @@ This section describes how to integrate Bytebase with TiDB Cloud.
 
     4. Select the `gharchive_dev` database and click **Transfer**.
 
-    ![Integrate ](bytebase-integrate-tidb.png)
+      ![Integrate](bytebase-integrate-tidb.png)
 
 ## Personal thoughts
 
