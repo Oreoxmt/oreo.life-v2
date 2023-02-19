@@ -151,7 +151,7 @@ const config = {
       },
       algolia: {
         appId: '3EPKB2DNI5',
-        apiKey: '5370345aad92cd043fb553670f26bd0f',
+        apiKey: '3d350d4d4294747e2f651af8dba69e01',
         indexName: 'oreo',
         contextualSearch: true,
       },
