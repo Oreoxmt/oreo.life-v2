@@ -31,6 +31,7 @@ const sidebars = {
         'reading-list/tips-tricks',
       ],
     },
+    'bash-wiki',
     'git-wiki',
     {
       type: 'category',
