@@ -290,7 +290,7 @@ Configuration items related to log.
     }
     ```
 
-5. To validate whether `level` is in the `log` [table](`flow-round-by-digit`) or not, search for `"log"` in the `config.go` file. You can find the following:
+5. To validate whether `level` is in the `log` [table](https://toml.io/en/v1.0.0#table) or not, search for `"log"` in the `config.go` file. You can find the following:
 
     ```go title="config/config.go"
     type Config struct {
@@ -516,7 +516,7 @@ The following takes [`pd-server.flow-round-by-digit`](https://docs.pingcap.com/t
 
     The default value of `flow-round-by-digit` is **`3`**.
 
-4. To validate whether `flow-round-by-digit` is in the `pd-server` [table](`flow-round-by-digit`) or not, search for `"pd-server"` in the `config.go` file. You can find the following output:
+4. To validate whether `flow-round-by-digit` is in the `pd-server` [table](https://toml.io/en/v1.0.0#table) or not, search for `"pd-server"` in the `config.go` file. You can find the following output:
 
     ```go title="server/config/config.go"
     type Config struct {
