@@ -113,6 +113,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
+        'how-tos/code-driven-documentation',
         'how-tos/deploy-openapi-using-netlify',
         'how-tos/bundle-scripts-using-webpack',
         'how-tos/manage-python-project-using-poetry',
