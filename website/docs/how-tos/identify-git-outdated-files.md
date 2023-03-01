@@ -297,7 +297,7 @@ cd docs
 
 3. 使用 `sed 's~^./~~'` 将输出结果中文件路径的 `./` 前缀删除，然后按照最后一次 commit 对应的 Unix 时间戳**排序**：
 
-    > Wiki: [`sed 's/regexp/replacement/'`](/docs/shell/sed-wiki.md#sregexpreplacement)
+    > Wiki: [`sed 's/regexp/replacement/'`](/shell/sed-wiki.md#sregexpreplacement)
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -331,7 +331,7 @@ cd docs
 
 4. 使用 `sed -E 's~^[0-9]+,~~'` 去掉无意义的 Unix 时间戳：
 
-    > Wiki: [`sed -E 's/regexp/replacement/'`](/docs/shell/sed-wiki.md#e--r---regexp-extended)
+    > Wiki: [`sed -E 's/regexp/replacement/'`](/shell/sed-wiki.md#e--r---regexp-extended)
 
     <Tabs>
     <TabItem value="command" label="Command">

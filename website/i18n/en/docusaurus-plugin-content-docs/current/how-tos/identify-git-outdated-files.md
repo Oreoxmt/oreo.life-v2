@@ -296,7 +296,7 @@ cd docs
 
 3. Remove the `./` prefix from the file path using `sed 's~^./~~'` and then **sort** the results by the Unix timestamp:
 
-    > Wiki: [`sed 's/regexp/replacement/'`](/sed-wiki#sregexpreplacement)
+    > Wiki: [`sed 's/regexp/replacement/'`](/shell/sed-wiki#sregexpreplacement)
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -330,7 +330,7 @@ cd docs
 
 4. Remove the meaningless Unix timestamp using `sed -E 's~^[0-9]+,~~'`:
 
-    > Wiki: [`sed -E 's/regexp/replacement/'`](/sed-wiki#e--r---regexp-extended)
+    > Wiki: [`sed -E 's/regexp/replacement/'`](/shell/sed-wiki#e--r---regexp-extended)
 
     <Tabs>
     <TabItem value="command" label="Command">
