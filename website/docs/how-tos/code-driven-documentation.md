@@ -13,7 +13,7 @@ This document outlines how to utilize code to enhance the accuracy of configurat
 
 <!--truncate-->
 
-[Documentation-drivern development](https://johnsamuel.info/en/programming/documentation-driven-development.html) emphasizes the importance of creating documentation that meets the needs of users. Code-driven documentation here prioritizes the accuracy and consistency of documentation by relying on the source of truth, which is the **code** itself. By using code to validate documentation, technical writers can ensure that their documentation is up-to-date and correctly reflects the behavior of the system, which can help to reduce errors and improve the overall quality of the documentation.
+[Documentation-driven development](https://johnsamuel.info/en/programming/documentation-driven-development.html) emphasizes the importance of creating documentation that meets the needs of users. Code-driven documentation here prioritizes the accuracy and consistency of documentation by relying on the source of truth, which is the **code** itself. By using code to verify documentation, technical writers can ensure that their documentation is up-to-date and correctly reflects the behavior of the system, which can help to reduce errors and improve the overall quality of the documentation.
 
 The following uses some configuration files as examples to illustrate how to use code to enhance the accuracy of configuration documentation. For example, the following configuration files are used:
 
@@ -50,14 +50,14 @@ Configuration items related to log.
     git clone https://github.com/pingcap/tidb.git --depth=1 tidb
     ```
 
-2. Search for **`"level"`** or `toml:"level"` in the `tidb` folder. The following uses [`find`](https://linux.die.net/man/1/find) and [`grep`](https://linux.die.net/man/1/grep) commands to search and list all files that contain the `level` keyword:
+2. Search for **`"level"`** or `toml:"level"` in the `tidb` folder. The following uses [`find`](https://linux.die.net/man/1/find) and [`grep`](https://linux.die.net/man/1/grep) commands to search and list all files that contain the `"level"` keyword:
 
     <Tabs>
     <TabItem value="command" label="Command">
 
     ```bash
     cd tidb
-    find .  | grep -l -r "\"level\""
+    find .  | grep -l -r '"level"'
     ```
 
     </TabItem>
@@ -86,7 +86,7 @@ Configuration items related to log.
     <TabItem value="command" label="Command">
 
     ```bash
-    find . | grep -r "\"level\"" --exclude "*_test.go"
+    find . | grep -r '"level"' --exclude "*_test.go"
     ```
 
     </TabItem>
@@ -255,7 +255,7 @@ Configuration items related to log.
     </TabItem>
     </Tabs>
 
-3. Validate the data type:
+3. Verify the data type:
 
     ```go title="config/config.go"
     type Log struct {
@@ -267,9 +267,9 @@ Configuration items related to log.
     }
     ```
 
-    The `level` item is defined in the `Log` struct, the variable name is `Level`, and the type is **`string`**. Then, you can validate whether the type of `log.level` in the document is consistent with the type of `Level` in the code.
+    The `level` item is defined in the `Log` struct, the variable name is `Level`, and the type is **`string`**. Then, you can verify whether the type of `log.level` in the document is consistent with the type of `Level` in the code.
 
-4. To validate the default value, search for `Level` in the `config/config.go` file, and you can find the default value of `Level` is **`"info"`**:
+4. To verify the default value, search for `Level` in the `config/config.go` file, and you can find the default value of `Level` is **`"info"`**:
 
     ```go title="config/config.go"
     // highlight-start
@@ -289,7 +289,7 @@ Configuration items related to log.
     }
     ```
 
-5. To validate whether `level` is in the `log` [table](https://toml.io/en/v1.0.0#table) or not, search for `"log"` in the `config.go` file. You can find the following:
+5. To verify whether `level` is in the `log` [table](https://toml.io/en/v1.0.0#table) or not, search for `"log"` in the `config.go` file. You can find the following:
 
     ```go title="config/config.go"
     type Config struct {
@@ -313,7 +313,7 @@ Configuration items related to log.
 
 ### Conclusion
 
-In the `config/config.go`, you can validate the following information of `CONFIG-NAME` by search `"CONFIG-NAME"`:
+In the `config/config.go`, you can verify the following information of `CONFIG-NAME` by searching`"CONFIG-NAME"`:
 
 - The **type** of a configuration item.
 - The **default value** of a configuration item.
@@ -335,9 +335,9 @@ The following takes [`raftstore.right-derive-when-split`](https://docs.pingcap.c
 
 2. Search for **`right(.*)derive(.*)when(.*)split`** in the `tikv` folder.
 
-3. Validate the data type in the `components/raftstore/src/store/config.rs` file:
+3. Verify the data type in the `components/raftstore/src/store/config.rs` file:
 
-    The configuration item is defined as `pub right_derive_when_split: bool` in the `Config` struct. The type is **`bool`**. Then, you can validate whether the type of `raftstore.right-derive-when-split` in the document is consistent with the type in the code.
+    The configuration item is defined as `pub right_derive_when_split: bool` in the `Config` struct. The type is **`bool`**. Then, you can verify whether the type of `raftstore.right-derive-when-split` in the document is consistent with the type in the code.
 
     ```rust title="components/raftstore/src/store/config.rs"
     struct Config {
@@ -349,7 +349,7 @@ The following takes [`raftstore.right-derive-when-split`](https://docs.pingcap.c
     }
     ```
 
-4. Validate the default value in the `components/raftstore/src/store/config.rs` file. The default value is **`true`**:
+4. Verify the default value in the `components/raftstore/src/store/config.rs` file. The default value is **`true`**:
 
     ```rust title="components/raftstore/src/store/config.rs"
     impl Default for Config {
@@ -368,7 +368,7 @@ The following takes [`raftstore.right-derive-when-split`](https://docs.pingcap.c
 
 ### Conclusion
 
-In the `components/.../config.rs`, you can validate the following information of `CONFIG-NAME` by search `CONFIG(.*)NAME` or `CONFIG_NAME`:
+In the `components/.../config.rs`, you can verify the following information of `CONFIG-NAME` by searching`CONFIG(.*)NAME` or `CONFIG_NAME`:
 
 - The **type** of a configuration item.
 - The **default value** of a configuration item.
@@ -515,7 +515,7 @@ The following takes [`pd-server.flow-round-by-digit`](https://docs.pingcap.com/t
 
     The default value of `flow-round-by-digit` is **`3`**.
 
-4. To validate whether `flow-round-by-digit` is in the `pd-server` [table](https://toml.io/en/v1.0.0#table) or not, search for `"pd-server"` in the `config.go` file. You can find the following output:
+4. To verify whether `flow-round-by-digit` is in the `pd-server` [table](https://toml.io/en/v1.0.0#table) or not, search for `"pd-server"` in the `config.go` file. You can find the following output:
 
     ```go title="server/config/config.go"
     type Config struct {
@@ -551,7 +551,7 @@ The following takes [`pd-server.flow-round-by-digit`](https://docs.pingcap.com/t
 
 ### Conclusion
 
-In the `server/config/config.go`, you can validate the following information of `CONFIG-NAME` by search `"CONFIG-NAME"`:
+In the `server/config/config.go`, you can verify the following information of `CONFIG-NAME` by searching`"CONFIG-NAME"`:
 
 - The **type** of a configuration item.
 - The **default value** of a configuration item.
@@ -559,6 +559,6 @@ In the `server/config/config.go`, you can validate the following information of 
 
 ## What's next?
 
-- How to validate configuration files using code automatically?
+- How to verify configuration files using code automatically?
 
 - How to generate configuration files from code automatically?

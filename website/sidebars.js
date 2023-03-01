@@ -31,7 +31,17 @@ const sidebars = {
         'reading-list/tips-tricks',
       ],
     },
-    'bash-wiki',
+    {
+      type: 'category',
+      label: 'Shell',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'shell/bash-wiki',
+        'shell/sed-wiki',
+      ],
+    },
     'git-wiki',
     {
       type: 'category',
@@ -89,16 +99,6 @@ const sidebars = {
     {
       type: 'category',
       label: 'Docker',
-      link: {
-        type: 'generated-index',
-      },
-      items: [
-        { type: 'ref', id: 'placeholder' }
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Linux',
       link: {
         type: 'generated-index',
       },

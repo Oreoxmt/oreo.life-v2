@@ -38,7 +38,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={"Oreo"}
-      description="Description will go into a meta tag in <head />">
+      description="Siempre imaginé que el paraíso sería algún tipo de biblioteca" >
       <HomepageHeader />
       <main>
       </main>
