@@ -95,7 +95,7 @@ cd docs
 
 1. 要获取一个文件的所有 **commit log**，你可以使用 [`git log`](https://git-scm.com/docs/git-log) 命令。下面以 `_index.md` 文件为例：
 
-    > Wiki: [How to show the commit logs of a specific file?](/website/docs/git-wiki.md#how-to-show-the-commit-logs-of-a-specific-file)
+    > Wiki: [How to show the commit logs of a specific file?](/git-wiki#how-to-show-the-commit-logs-of-a-specific-file)
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -141,7 +141,7 @@ cd docs
 
     要限制 commit logs 的数量，可以使用 [`-<number>`, `-n <number>`, `--max-count=<number>`](https://git-scm.com/docs/git-log#Documentation/git-log.txt--ltnumbergt) 选项：
 
-    > Wiki: [How to show the latest commit log of a specific file?](/website/docs/git-wiki.md#how-to-show-the-latest-commit-log-of-a-specific-file)
+    > Wiki: [How to show the latest commit log of a specific file?](/git-wiki#how-to-show-the-latest-commit-log-of-a-specific-file)
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -170,7 +170,7 @@ cd docs
 
     下面示例的自定义格式为：*最后一次 commit 的 UNIX 时间,commit 哈希值,最后一次 commit 作者名称,最后一次 commit 的 YYYY-MM-DD 格式时间,最后一次 commit 的相对时间*：
 
-    > Wiki: [How to show commit logs in a custom format?](/website/docs/git-wiki.md#how-to-show-commit-logs-in-a-custom-format)
+    > Wiki: [How to show commit logs in a custom format?](/git-wiki#how-to-show-commit-logs-in-a-custom-format)
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -191,7 +191,7 @@ cd docs
 
 4. 使用 [`-P`, `-no-pager`](https://git-scm.com/docs/git/2.26.0#Documentation/git.txt--P) 选项**不分页**输出自定义的 commit 信息：
 
-    > Wiki: [How to show the commit logs without paging?](/website/docs/git-wiki.md#how-to-show-the-commit-logs-without-paging)
+    > Wiki: [How to show the commit logs without paging?](/git-wiki#how-to-show-the-commit-logs-without-paging)
 
     ```bash
     git --no-pager log -1 --format=format:"%at,%H,%an,%as,%ar%n" _index.md
@@ -298,7 +298,7 @@ cd docs
 
 3. 使用 `sed 's~^./~~'` 将输出结果中文件路径的 `./` 前缀删除，然后按照最后一次 commit 对应的 Unix 时间戳**排序**：
 
-    > Wiki: [`sed 's/regexp/replacement/'`](/website/docs/shell/sed-wiki.md#sregexpreplacement)
+    > Wiki: [`sed 's/regexp/replacement/'`](/sed-wiki#sregexpreplacement)
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -332,7 +332,7 @@ cd docs
 
 4. 使用 `sed -E 's~^[0-9]+,~~'` 去掉无意义的 Unix 时间戳：
 
-    > Wiki: [`sed -E 's/regexp/replacement/'`](/website/docs/shell/sed-wiki.md#e--r---regexp-extended)
+    > Wiki: [`sed -E 's/regexp/replacement/'`](/sed-wiki#e--r---regexp-extended)
 
     <Tabs>
     <TabItem value="command" label="Command">

@@ -1,8 +1,7 @@
 ---
-slug: 2023-03-04-identify-git-outdated-files
-title: How to Identify Outdated Files in a Git Repository
-authors: [Oreo]
-tags: [Git, Shell, Tips & Tricks, How-tos]
+sidebar_label: "How to Identify Outdated Files in a Git Repository"
+title: "How to Identify Outdated Files in a Git Repository"
+description: "Introduce how to identify outdated files in a Git repository."
 ---
 
 ```mdx-code-block
