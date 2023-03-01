@@ -40,6 +40,7 @@ const sidebars = {
       items: [
         'shell/bash-wiki',
         'shell/sed-wiki',
+        'how-tos/identify-git-outdated-files',
       ],
     },
     'git-wiki',
@@ -113,6 +114,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
+        'how-tos/identify-git-outdated-files',
         'how-tos/code-driven-documentation',
         'how-tos/deploy-openapi-using-netlify',
         'how-tos/bundle-scripts-using-webpack',
