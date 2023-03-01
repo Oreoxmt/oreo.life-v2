@@ -22,7 +22,7 @@ git branch | grep -v "main" | xargs git branch -D
 The following is the detailed explanation according to [ChatGPT](https://openai.com/blog/chatgpt/):
 
 :::info quote
-This command uses a pipe (|) to chain together several commands:
+This command uses a pipe (`|`) to chain together several commands:
 
 1. `git branch` lists all of the local branches in the repository.
 2. `grep -v "main"` filters out the "main" branch from the list of branches. The `-v` flag inverts the match, so it shows all branches that do not match the pattern `main`.
@@ -63,8 +63,58 @@ git fetch --unshallow
 
 The `git pull --unshallow` command is equivalent to the preceding command.
 
-
 ## [`git log`](https://git-scm.com/docs/git-log)
+
+### How to show the commit logs of a specific file?
+
+```bash
+git log {FILE_PATH}
+```
+
+### How to show the latest commit log of a specific file?
+
+To limit the number of commits to output, use the [`-<number>`, `-n <number>`, `--max-count=<number>`](https://git-scm.com/docs/git-log#Documentation/git-log.txt--ltnumbergt) option:
+
+```bash
+git log -1 {FILE_PATH}
+# git log -n 1 {FILE_PATH}
+# git log --max-count=1 {FILE_PATH}
+```
+
+### How to show the commit logs without paging?
+
+```bash
+git log --no-pager
+```
+
+### How to show commit logs in a custom format?
+
+To pretty-print the commit logs in a given format, use the [`--format=<format>`](https://git-scm.com/docs/git-log#Documentation/git-log.txt---formatltpatterngt) option. For more details, refer to [Pretty Formats](https://git-scm.com/docs/pretty-formats).
+
+<Tabs>
+  <TabItem value="command" label="Command">
+
+  ```bash
+  git log -1 --format=format:"%at,%H,%an,%as,%ar%n"
+  ```
+
+  </TabItem>
+  <TabItem value="output" label="Output">
+
+  ```bash
+  1676889306,b364250639205bd054ada454749a0dc123456789,AuthorName,2023-01-01,10 days ago
+  ```
+
+  </TabItem>
+</Tabs>
+
+The description of the format is as follows:
+
+- `%at`: The author date, **UNIX** timestamp.
+- `%H`: The commit hash.
+- `%an`: The author name.
+- `%as`: The author date in the `YYYY-MM-DD` format.
+- `%ar`: The author date, relative format.
 
 ### How to find which commit introduced/deleted a specific text?
 

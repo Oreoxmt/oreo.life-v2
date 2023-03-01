@@ -1,4 +1,7 @@
-# bash
+---
+title: "bash"
+description: "A collection of useful bash commands and tips."
+---
 
 ## Control operators `&` and `&&`
 
