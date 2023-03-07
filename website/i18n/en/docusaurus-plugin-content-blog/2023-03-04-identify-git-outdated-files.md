@@ -40,9 +40,9 @@ brew install gnu-sed findutils
     ```
 
     </TabItem>
-    <TabItem value="script" label="Shell Script">
+    <TabItem value="script" label="Shell script">
 
-    ```bash title="generate_last_commit_report.sh
+    ```bash title="generate_last_commit_report.sh"
     #!/bin/bash
     set -e
 
