@@ -52,6 +52,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
+        'python/time-in-python',
         'how-tos/manage-python-project-using-poetry',
         {
           type: 'category',

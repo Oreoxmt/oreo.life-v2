@@ -1,11 +1,9 @@
 ---
 slug: 2022-07-31-reading-list
-title: RL 01 | I don't need to know how it works
+title: RL 01 | I Don't Need to Know How It Works
 authors: [Oreo]
 tags: [Reading List, Git, Tips & Tricks]
 ---
-
-# RL 01 | I don't need to know how it works
 
 My Reading List from July 16, 2022 to July 31, 2022.
 
