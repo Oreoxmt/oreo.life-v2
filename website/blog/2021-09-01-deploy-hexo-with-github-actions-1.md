@@ -269,7 +269,6 @@ jobs:
 ```
 </details>
 
-
 然后再添加 Git remote 指向在 GitHub 用于储存博客源码的 Repo 地址（注意不是 Pages 对应的 Repo），执行 `git push` 即可。
 
 稍等片刻，就可以在 Repo 的 Actions 页面下看到一个新触发的任务。不出意外，log 中将显示 Hexo 成功生成了一份静态网页。大功告成~

@@ -112,89 +112,88 @@ help     -- Display the manual of a command
 ## 初始化项目
 
 <Tabs groupId="poetry-init">
-  <TabItem value="新项目">
+<TabItem value="新项目">
 
-  使用 [`poetry new`](https://python-poetry.org/docs/cli/#new) 命令创建并初始化一个新项目 `tidbcloudy`：
+使用 [`poetry new`](https://python-poetry.org/docs/cli/#new) 命令创建并初始化一个新项目 `tidbcloudy`：
 
-  ```bash
-  poetry new tidbcloudy
-  ```
+```bash
+poetry new tidbcloudy
+```
 
-  输出结果示例：
+输出结果示例：
 
-  ```bash
-  Created package tidbcloudy in tidbcloudy
-  ```
+```bash
+Created package tidbcloudy in tidbcloudy
+```
 
-  查看新创建的 `tidbcloudy` 项目目录结构：
+查看新创建的 `tidbcloudy` 项目目录结构：
 
-  ```
-  $ tree tidbcloudy
-  tidbcloudy
-  ├── README.md
-  ├── pyproject.toml
-  ├── tests
-  │   └── __init__.py
-  └── tidbcloudy
-      └── __init__.py
+```
+$ tree tidbcloudy
+tidbcloudy
+├── README.md
+├── pyproject.toml
+├── tests
+│   └── __init__.py
+└── tidbcloudy
+    └── __init__.py
 
-  2 directories, 4 files
-  ```
+2 directories, 4 files
+```
 
-  文件说明：
+文件说明：
 
-  - `README.md`：项目说明文件
-  - `pyproject.toml`：项目配置文件，包含项目的名称、版本、作者等项目基本信息以及项目的依赖信息等。详细说明可参考 [Poetry 官方文档](https://python-poetry.org/docs/pyproject#the-pyprojecttoml-file)。
+- `README.md`：项目说明文件
+- `pyproject.toml`：项目配置文件，包含项目的名称、版本、作者等项目基本信息以及项目的依赖信息等。详细说明可参考 [Poetry 官方文档](https://python-poetry.org/docs/pyproject#the-pyprojecttoml-file)。
 
-      ```toml
-      [tool.poetry]
-      name = "tidbcloudy"
-      version = "0.1.0"
-      description = ""
-      authors = ["Oreo <aolinz@outlook.com>"]
-      readme = "README.md"
+    ```toml
+    [tool.poetry]
+    name = "tidbcloudy"
+    version = "0.1.0"
+    description = ""
+    authors = ["Oreo <aolinz@outlook.com>"]
+    readme = "README.md"
 
-      [tool.poetry.dependencies]
-      python = "^3.8"
+    [tool.poetry.dependencies]
+    python = "^3.8"
 
-      [build-system]
-      requires = ["poetry-core"]
-      build-backend = "poetry.core.masonry.api"
-      ```
+    [build-system]
+    requires = ["poetry-core"]
+    build-backend = "poetry.core.masonry.api"
+    ```
 
-  - `tests`：单元测试文件夹
-  - `tidbcloudy`：项目源码文件夹
+- `tests`：单元测试文件夹
+- `tidbcloudy`：项目源码文件夹
 
+</TabItem>
+<TabItem value="已有项目">
 
-  </TabItem>
-  <TabItem value="已有项目">
+如果你已经有了一个项目，可以使用 [`poetry init`](https://python-poetry.org/docs/cli/#init) 命令进行初始化：
 
-  如果你已经有了一个项目，可以使用 [`poetry init`](https://python-poetry.org/docs/cli/#init) 命令进行初始化：
+```bash
+cd tidbcloudy
+poetry init
+```
 
-  ```bash
-  cd tidbcloudy
-  poetry init
-  ```
+根据提示输入项目的信息，最后会生成一个 `pyproject.toml` 文件。详细说明可参考 [Poetry 官方文档](https://python-poetry.org/docs/pyproject#the-pyprojecttoml-file)。
 
-  根据提示输入项目的信息，最后会生成一个 `pyproject.toml` 文件。详细说明可参考 [Poetry 官方文档](https://python-poetry.org/docs/pyproject#the-pyprojecttoml-file)。
+```
+[tool.poetry]
+name = "tidbcloudy"
+version = "0.1.0"
+description = ""
+authors = ["Oreo <aolinz@outlook.com>"]
+readme = "README.md"
 
-  ```
-  [tool.poetry]
-  name = "tidbcloudy"
-  version = "0.1.0"
-  description = ""
-  authors = ["Oreo <aolinz@outlook.com>"]
-  readme = "README.md"
+[tool.poetry.dependencies]
+python = "^3.8"
 
-  [tool.poetry.dependencies]
-  python = "^3.8"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+```
 
-  [build-system]
-  requires = ["poetry-core"]
-  build-backend = "poetry.core.masonry.api"
-  ```
-
-  </TabItem>
+</TabItem>
 </Tabs>
 
 ## 管理依赖
@@ -297,6 +296,16 @@ Building tidbcloudy (0.1.1)
   - Building wheel
   - Built tidbcloudy-0.1.1-py3-none-any.whl
 ```
+
+:::note
+
+如果遇到 `[Errno 2] No such file or directory: 'python'` 错误，可以参考 [poetry/issue/6841](https://github.com/python-poetry/poetry/issues/6841#issuecomment-1284590137) 执行如下命令：
+
+```bash
+rm -rf $(poetry config virtualenvs.path)/*
+```
+
+:::
 
 ### 上传
 
