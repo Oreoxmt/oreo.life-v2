@@ -3,6 +3,11 @@ title: "bash"
 description: "A collection of useful bash commands and tips."
 ---
 
+```mdx-code-block
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+```
+
 ## Control operators `&` and `&&`
 
 When resolving cherry-pick conflicts on multiple branches (PRs), I often use the following command:
@@ -43,3 +48,117 @@ For more details, refer to [Job Control Builtins](https://www.gnu.org/software/b
 
 :::
 
+## Remove a substring from a string
+
+You can get more solutions from [Stackoverflow/16623835](https://stackoverflow.com/questions/16623835/remove-a-fixed-prefix-suffix-from-a-string-in-bash).
+
+For more details about `#`, `##`, `%`, and `%%`, refer to [Shell Parameter Expansion](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html).
+
+### Remove the prefix using `#`
+
+In `${parameter#word}`, `#` is used to remove the **shortest matching pattern** `word` from the beginning of `parameter`.
+
+```bash
+var="test-123"
+echo "${var#test-}" # 123
+```
+
+When you use `find ${DIR_PATH}` command to search for files, the result will be prefixed with `${DIR_PATH}`. To remove the prefix, you can use the `#` operator. For example:
+
+```bash
+find ${DIR_PATH} | while IFS= read -r DIR; do
+    echo "${DIR#${DIR_PATH}}"
+done
+```
+
+You can also use the `sed` command to perform the same operation. For more details, refer to [sed](sed-wiki.md).
+
+```bash
+find ${DIR_PATH} | while IFS= read -r DIR; do
+    echo "${DIR}" | sed "s~^${DIR_PATH}~~"
+done
+```
+
+The following example shows the result before and after removing the prefix:
+
+<Tabs>
+
+  <TabItem value="Before">
+
+  ```bash
+  find . -maxdepth 3 -mindepth 3 | while IFS= read -r DIR; do
+      echo "${DIR}"
+  done
+  # ./website/docs
+  # ./website/blog
+  # ./website/yarn.lock
+  # ./website/package.json
+  # ./website/static
+  # ./website/docsearch.json
+  ```
+
+  </TabItem>
+
+  <TabItem value="After">
+
+  ```bash
+  find . -maxdepth 3 -mindepth 3 | while IFS= read -r DIR; do
+      echo "${DIR#./}"
+  done
+  # website/docs
+  # website/blog
+  # website/yarn.lock
+  # website/package.json
+  # website/static
+  # website/docsearch.json
+  ```
+
+  </TabItem>
+
+</Tabs>
+
+:::tip
+
+What is the difference between `#` and `##`?
+
+- `#` removes the **shortest** matching pattern `word` from the beginning of `parameter`.
+- `##` removes the **longest** matching pattern `word` from the beginning of `parameter`.
+
+```bash
+var="test-test-123"
+echo "${var#test-}" # test-123
+echo "${var#*test-}" # test-123
+echo "${var##*test-}" # 123
+```
+
+In the following example, `a*b` pattern matches any sequence that starts with `a` and ends with `b`.
+
+```bash
+var="aaabbbccc"
+echo "${var#*a}" # aabbbccc
+echo "${var##*a}" # bbbccc
+echo "${var#a*b}" # bbccc
+echo "${var##a*b}" # ccc
+echo "${var#a*c}" # cc
+echo "${var##a*c}" #
+```
+
+:::
+
+### Remove the suffix using `%`
+
+In `${parameter%word}`, `%` is used to remove the **shortest matching pattern** `word` word from the end of `parameter`.
+
+```bash
+var="test-123"
+echo "${var%-123}" # test
+```
+
+:::tip
+
+What is the difference between `%` and `%%`?
+
+- `%` removes the **shortest** matching pattern `word` from the end of `parameter`.
+- `%%` removes the **longest** matching pattern `word` from the end of `parameter`.
+
+:::
