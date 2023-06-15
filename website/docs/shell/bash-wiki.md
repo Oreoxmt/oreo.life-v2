@@ -30,3 +30,16 @@ command2 is executed if, and only if, command1 returns an exit status of zero.
 :::
 
 For more details, refer to [Shell Grammar: Lists](https://linux.die.net/man/1/bash).
+
+:::tip
+
+You can also use the `bg` command to run a command in the background. For example:
+
+1. Run a time-consuming command in the foreground, such as `git pull`.
+2. Press `Ctrl+Z` in the terminal to stop the `git pull` command. (`Ctrl+Z` sends the `SIGTSTP` signal to the process.)
+3. Run the `bg` command to continue the `git pull` command in the background.
+
+For more details, refer to [Job Control Builtins](https://www.gnu.org/software/bash/manual/html_node/Job-Control-Builtins.html).
+
+:::
+
