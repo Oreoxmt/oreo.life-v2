@@ -32,6 +32,14 @@ In the preceding substitution command <code>s~**^./**~~</code>:
 - `^./` is a regular expression that matches any string that starts with `./`.
 - The replacement string is an empty string.
 
+When you use `find ${DIR_PATH}` command to search for files, the result will be prefixed with `${DIR_PATH}`. To remove the prefix, you can use the [`#` operator](bash-wiki.md#remove-the-prefix-using) or the `sed` command. For example:
+
+```bash
+find ${DIR_PATH} | while IFS= read -r DIR; do
+    echo "${DIR}" | sed "s~^${DIR_PATH}~~"
+done
+```
+
 ## `-E`, `-r`, `--regexp-extended`
 
 To use [extended regular expressions](https://www.gnu.org/software/sed/manual/sed.html#ERE-syntax) in `sed`, use the `-E` option. For example, the following `sed` command removes the number prefix and the comma from the beginning of a string:
