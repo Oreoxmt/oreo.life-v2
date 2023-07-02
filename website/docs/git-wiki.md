@@ -84,7 +84,7 @@ git log -1 {FILE_PATH}
 ### How to show the commit logs without paging?
 
 ```bash
-git log --no-pager
+git --no-pager log
 ```
 
 ### How to show commit logs in a custom format?
