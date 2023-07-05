@@ -39,6 +39,7 @@ const sidebars = {
       },
       items: [
         'shell/bash-wiki',
+        'shell/rsync-wiki',
         'shell/sed-wiki',
         'how-tos/identify-git-outdated-files',
       ],
