@@ -23,6 +23,18 @@ DEST="docs-scaffold/markdown-pages/"
 rsync -av --delete --checksum --include='*/' --include='TOC.md' --include='_index.md' --include='_docHome.md' --exclude='*' "$SRC" "$DEST"
 ```
 
+与 `cp "$SRC" "$DEST"` 不同的是，上面的 `rsync` 命令可以实现**更细粒度**的文件同步，例如只同步指定的文件、保持目标目录中只有指定的文件等。当 `docs-scaffold` 目录存在但是 `markdown-pages` 目录不存在时，`cp` 命令会报错，而 `rsync` 命令会自动创建 `markdown-pages` 目录。
+
+:::tip
+
+在下面命令中，如果 `docs-scaffold/markdown-pages` 目录不存在，`rsync` 会报错。
+
+```bash
+rsync docs/markdown-pages/ docs-scaffold/markdown-pages/test/
+```
+
+:::
+
 ## 过滤规则
 
 :::info quote
