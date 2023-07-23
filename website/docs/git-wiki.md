@@ -257,3 +257,21 @@ The following is an example of finding the commit that changed `frontend/src/typ
 
   </TabItem>
 </Tabs>
+
+## [`git rebase`](https://git-scm.com/docs/git-rebase)
+
+### How to retain the commit signature after interactive rebase?
+
+If you sign your commits using GPG, you can add the `--gpg-sign` option or `-S` option to retain the commit signature in the `git rebase -i` command.
+
+```bash
+git rebase -i {COMMIT_HASH} --gpg-sign
+```
+
+If you sign your commits using the `Signed-off-by` line, you can add the `--signoff` or `-s` option to retain the `Signed-off-by` line in the `git rebase -i` command.
+
+```bash
+git rebase -i {COMMIT_HASH} --signoff
+```
+
+For more information, see [`git rebase --gpg-sign`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---gpg-signltkeyidgt) and [`git rebase --signoff`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---signoff).
