@@ -104,3 +104,19 @@ Rsync builds an ordered list of filter rules as specified on the command-line.
 计算和校验 checksum 的过程会消耗大量的 IO 资源，所以会导致同步速度变慢。
 
 :::
+
+### `-m`, `--prune-empty-dirs`
+
+`-m` 选项可以让 Rsync 不同步空的目录。
+
+例如，下面的命令会同步 `docs/markdown-pages/` 目录及其子目录中的所有文件，包括空的目录。
+
+```bash
+rsync -av docs/markdown-pages/ docs-scaffold/markdown-pages/
+```
+
+如果不想同步空的目录，可以使用 `-m` 选项。
+
+```bash
+rsync -avm docs/markdown-pages/ docs-scaffold/markdown-pages/
+```
