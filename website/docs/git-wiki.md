@@ -5,6 +5,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
+## Basic
+
+[Three sections of a Git project: working, staging, repository](./git-states.png)
+
+For more information, refer to [The Three States](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F).
+
 ## [`git branch`](https://git-scm.com/docs/git-branch)
 
 ### How to delete a local branch?
@@ -50,6 +56,32 @@ git log
 ```
 
 For more information about how to fetch the remaining commits, refer to [How to fetch the remaining commits after creating a shallow clone](#how-to-fetch-the-remaining-commits-after-creating-a-shallow-clone).
+
+## [`git diff`](https://git-scm.com/docs/git-diff)
+
+### `git diff` vs `git diff --staged` vs `git diff HEAD`
+
+- `git diff` (without any additional arguments) shows the changes between the **working directory** and the **index** (staging area). It displays what you've changed but haven't staged.
+
+- `git diff --staged` shows the changes between the **index** (staging area) and the **last commit**. It displays what you've staged but haven't committed. To commit these changes, you can use `git commit` without `-a` option.
+
+- `git diff HEAD` shows the changes between the **working directory** and the **last commit**. It displays all changes made since your last commit, regardless of whether you've staged them or not. To commit these changes, you can use `git commit -a` option.
+
+For more information, refer to [Various ways to check your working tree](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt-Variouswaystocheckyourworkingtree).
+
+### How to show changes between a branch and its base branch?
+
+```bash
+git diff --merge-base
+```
+
+:::info quote
+
+If `--merge-base` is given, instead of using `<commit>`, use the merge base of `<commit>` and `HEAD`. `git diff --merge-base A` is equivalent to `git diff $(git merge-base A HEAD)`.
+
+:::
+
+Usage: GitHub workflow
 
 ## [`git fetch`](https://git-scm.com/docs/git-fetch)
 

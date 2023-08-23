@@ -162,3 +162,110 @@ What is the difference between `%` and `%%`?
 - `%%` removes the **longest** matching pattern `word` from the end of `parameter`.
 
 :::
+
+## Tips for `sh` scripts
+
+### shebang
+
+The shebang is the first line of the script. It is used to specify the interpreter for the script. For example:
+
+```bash
+#!/bin/bash
+```
+
+### set -e
+
+https://readhacker.news/s/5nA4G
+
+`set -e` is used to exit immediately if a command exits with a non-zero status. For example:
+
+```bash
+set -e
+```
+
+### set -x
+
+`set -x` is used to print commands and their arguments as they are executed. For example:
+
+```bash
+set -x
+```
+
+Note that `set -x` will print all information, including some sensitive information such as the password. Therefore, you should not use `set -x` in production. Or you can use `set +x` to turn off the printing.
+
+```bash
+set -ex
+
+# Do something
+
+set +x
+
+# Get the base branch of this PR <https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#get-a-pull-request>
+BASE_BRANCH=$(curl -fsSL -H "Authorization: token $GITHUB_TOKEN" \
+    "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/pulls/$PR_NUMBER" | \
+    jq -r '.base.ref')
+
+set -x
+
+# Do something
+```
+
+### Get the directory of the current script
+
+Sometimes, you run a script from another directory, not in the directory of the script. In this case, to make your script work, you can use the following code to get the directory of the script:
+
+```bash
+# Get the directory of this script
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+cd "$SCRIPT_DIR"
+```
+
+Explanation:
+
+- `BASH_SOURCE[0]` is bash variable that stores the name of the script.
+- `dirname` is used to get the directory of the current script.
+
+    ```bash
+    dirname /Projects/preview/scripts/test.sh # /Projects/preview/scripts
+    ```
+
+```bash
+./Projects/preview/scripts/test.sh
+# dirname -- "${BASH_SOURCE[0]}"
+# dirname -- ./Projects/preview/scripts/test.sh
+# cd -- /Projects/preview/scripts
+# pwd
+# SCRIPT_DIR=/Users/user/Projects/preview/scripts
+# cd /Users/user/Projects/preview/scripts
+```
+
+### test environment
+
+```bash
+test -n "$TEST" && echo "Test mode, exiting..." && exit 0
+```
+
+## Remove empty directories
+
+```bash
+find /path/to/start -type d -empty -delete
+```
+
+## `for i in *`
+
+```bash
+#!/bin/bash
+
+set -ex
+
+for i in *; do
+    if [ -d "$i" ]; then
+        cd $i;
+        echo "Generating PDF for $i";
+        bash scripts/generate_pdf.sh;
+        mv *.pdf ..;
+        cd ..;
+    fi
+done
+```
