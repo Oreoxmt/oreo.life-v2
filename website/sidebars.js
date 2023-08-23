@@ -53,6 +53,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
+        'how-tos/python-test-shell-scripts',
         'python/time-in-python',
         'how-tos/manage-python-project-using-poetry',
         {
@@ -116,11 +117,12 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
+        'how-tos/python-test-shell-scripts',
         'how-tos/identify-git-outdated-files',
         'how-tos/code-driven-documentation',
         'how-tos/deploy-openapi-using-netlify',
         'how-tos/bundle-scripts-using-webpack',
-        'how-tos/manage-python-project-using-poetry',
+        'how-tos/manage-python-project-using-poetry'
       ],
     }
   ],
