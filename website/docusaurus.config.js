@@ -144,7 +144,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['docker', 'rust', 'cpp'],
+        additionalLanguages: ['docker', 'rust', 'cpp', 'cmake'],
       },
       colorMode: {
         respectPrefersColorScheme: true,
