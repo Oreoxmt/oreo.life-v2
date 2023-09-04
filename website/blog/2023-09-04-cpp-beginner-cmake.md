@@ -100,9 +100,16 @@ make # This will execute the build files and build the project
   Added dir 'thirdparty/fmt'
   ```
 
-  此时查看 `git log` 可以发现新增了一个 merge commit：
+  此时查看 `git log` 可以发现 `fmt` 被 squash 为一个 commit 以及新增了一个 merge commit：
 
   ```bash
+  commit dd05d0f6812ddcfb72d5e1425e7bad88f424451f
+  Merge: e5b1c472 20d0c586
+  Author: Oreo
+  Date:   Mon Sep 4 21:37:57 2023 +0800
+  
+      Merge commit '20d0c58622d07bf66f125efff52cc440b88fe2eb' as 'thirdparty/fmt'
+  
   commit 20d0c58622d07bf66f125efff52cc440b88fe2eb
   Author: Oreo
   Date:   Mon Sep 4 21:37:57 2023 +0800
