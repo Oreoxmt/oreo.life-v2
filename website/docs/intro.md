@@ -18,4 +18,5 @@ sidebar_position: 1
 
 ## Friends
 
-kblack's [Recycle Bin](https://blog.i64d.com)
+- kblack's [Recycle Bin](https://blog.i64d.com)
+- JTJL's [U.M.R Blog](https://jtjl.github.io)
