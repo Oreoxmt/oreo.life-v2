@@ -18,6 +18,11 @@ const config = {
     {
       src: 'https://platform.twitter.com/widgets.js',
       async: true,
+    },
+    {
+      src: 'https://umm.oreo.life/juicy.js',
+      async: true,
+      'data-website-id': '7a07d44e-77c0-43c5-aaa3-5071404be998'
     }
   ],
 
@@ -144,7 +149,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['docker', 'rust', 'cpp'],
+        additionalLanguages: ['docker', 'rust', 'cpp', 'cmake'],
       },
       colorMode: {
         respectPrefersColorScheme: true,

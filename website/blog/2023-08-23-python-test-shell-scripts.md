@@ -273,6 +273,10 @@ test.verify(diff_command_line)
    - 提供待测试脚本的环境变量 `script_env`
    - 提供验证功能的 `diff` 命令 `diff_command_line`
 
+配置步骤如下图所示：
+
+![Test Process](/img/docsite_preview_test_process.png)
+
 ### 示例
 
 下面是测试 `test_sync_scaffold.sh` 功能对应的 Python 脚本：
