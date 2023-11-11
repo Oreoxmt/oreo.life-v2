@@ -19,6 +19,10 @@ const sidebars = {
   // But you can create a sidebar manually
   docs: [
     'intro',
+    // {
+    //   type: 'html',
+    //   value: 'website/static/projects'
+    // },
     {
       type: 'category',
       label: 'Reading List',
