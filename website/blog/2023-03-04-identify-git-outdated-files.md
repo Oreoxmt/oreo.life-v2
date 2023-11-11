@@ -469,7 +469,7 @@ cd docs
 
 5. 为了兼容 macOS，在脚本中使用 `gfind` 和 `gsed`：
 
-    ```shell
+    ```bash
     #!/bin/bash
     set -e
 

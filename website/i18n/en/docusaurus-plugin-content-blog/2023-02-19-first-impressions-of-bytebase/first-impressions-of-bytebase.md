@@ -35,8 +35,8 @@ My development environment is:
 
 I tried following the instructions in [Install Bytebase with Docker](https://www.bytebase.com/docs/get-started/install/deploy-with-docker), but an error occurred:
 
-```shell
-➜  ~ docker run --init \
+```shell-session
+$ docker run --init \
   --name bytebase \
   --platform linux/amd64 \
   --restart always \

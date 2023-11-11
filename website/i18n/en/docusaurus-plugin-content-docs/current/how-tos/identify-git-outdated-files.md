@@ -466,7 +466,7 @@ To make the report more readable, the following steps generate a Markdown table 
 
 5. Use `gfind` and `gsed` to make the script compatible with macOS:
 
-    ```shell
+    ```bash
     #!/bin/bash
     set -e
 

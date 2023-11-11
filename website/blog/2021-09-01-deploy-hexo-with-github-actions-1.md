@@ -62,7 +62,7 @@ Oreo 同学最近开始记笔记和写心情了，但是就是不走寻常路偏
 
 那来吧，先随便写一个 `README.md` 作为 initial commit 这样：
 
-```shell
+```shell-session
 $ git init
 Initialized empty Git repository in .git/
 $ echo "# oreo.life-src" > README.md
@@ -72,8 +72,8 @@ $ git commit -m "Initial commit"
 
 然后把我们现在什么都没有的 Hexo 博客提交上去：
 
-```shell
-$ git commit -a -m "Initialize Hexo blog (without theme)"
+```bash
+git commit -a -m "Initialize Hexo blog (without theme)"
 ```
 
 ### 使用 git submodules 添加主题
@@ -84,7 +84,7 @@ $ git commit -a -m "Initialize Hexo blog (without theme)"
 
 直接使用 submodule 命令添加 Fluid 主题源码，并 checkout 到当前的最新版本（需要在 [release 页面](https://github.com/fluid-dev/hexo-theme-fluid/releases/) 查看，本文撰写时为 `v1.8.2`）
 
-```shell
+```shell-session
 $ git submodule add https://github.com/fluid-dev/hexo-theme-fluid themes/fluid
 Cloning into 'themes/fluid'...
 Resolving deltas: 100% (2849/2849), done.
@@ -114,8 +114,8 @@ theme: fluid
 
 然后顺手交个代码吧...
 
-```shell
-$ git commit -a -m "Add fluid theme by submodule"
+```bash
+git commit -a -m "Add fluid theme by submodule"
 ```
 
 ## 配置 GitHub Actions

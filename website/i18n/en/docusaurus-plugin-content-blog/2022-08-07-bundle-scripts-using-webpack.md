@@ -53,7 +53,7 @@ For more details about configuration in webpack, see [Configuration](https://web
 
   :::
 
-    ```js
+    ```javascript
     const path = require('path');
 
     module.exports = {
@@ -72,14 +72,14 @@ For more details about configuration in webpack, see [Configuration](https://web
     <Tabs groupId="package-manager">
     <TabItem value="yarn">
 
-    ```shell
+    ```bash
     npx webpack --config webpack.config.js
     ```
 
     </TabItem>
     <TabItem value="npm">
 
-    ```shell
+    ```bash
     npx webpack --config webpack.config.js
     ```
 
@@ -88,7 +88,7 @@ For more details about configuration in webpack, see [Configuration](https://web
 
 - Oops! An error occurs after executing the preceding command.
 
-    ```shell
+    ```
     BREAKING CHANGE: webpack < 5 used to include polyfills for node.js core modules by default.
     This is no longer the case. Verify if you need this module and configure a polyfill for it.
 
@@ -106,7 +106,7 @@ For more details about configuration in webpack, see [Configuration](https://web
 
 - Then, I Google the error message and find the [answer in Stack Overflow](https://stackoverflow.com/a/66306663) and [Targets in webpack](https://webpack.js.org/concepts/targets/). To use `node` webpack to compile for usage, add the `target: 'node'` into the `webpack.config.js` file.
 
-    ```js
+    ```javascript
     const path = require('path');
 
     module.exports = {
@@ -123,8 +123,8 @@ For more details about configuration in webpack, see [Configuration](https://web
 
 - Try to execute `npx webpack --config webpack.config.js` again and a warning message shows:
 
-    ```shell
-    npx webpack --config webpack.config.js
+    ```shell-session
+    $ npx webpack --config webpack.config.js
     asset main.js 484 KiB [emitted] [minimized] (name: main) 1 related asset
     ...
     WARNING in configuration
@@ -139,7 +139,7 @@ For more details about configuration in webpack, see [Configuration](https://web
 
 - To enables deterministic mangled names for modules and chunks, add `mode: 'production'` into the `webpack.config.js` file.
 
-    ```js
+    ```javascript
     const path = require('path');
 
     module.exports = {
@@ -157,8 +157,8 @@ For more details about configuration in webpack, see [Configuration](https://web
 
 - Try to execute `npx webpack --config webpack.config.js` again and it works to generate a `dist/main.js` and `dist/main.js.LICENSE.txt`.
 
-    ```shell
-    npx webpack --config webpack.config.js
+    ```shell-session
+    $ npx webpack --config webpack.config.js
     ...
     json modules 155 KiB
     modules by path ./node_modules/har-schema/lib/ 6.93 KiB 18 modules
@@ -173,8 +173,8 @@ For more details about configuration in webpack, see [Configuration](https://web
 
 - To test the generated `dist/main.js` file, run the following command.
 
-    ```shell
-    node dist/main.js --help
+    ```shell-session
+    $ node dist/main.js --help
     Usage: postprocess [options] [command]
 
     Postprocess an OpenAPI document for ReDoc
@@ -235,7 +235,7 @@ Modify the Dockerfile as follows:
       :::tip
       To ignore some files, you can create a soft link from `.gitignore` to  `.dockerignore` using `ln`:
 
-      ```shell
+      ```bash
       ln -s .gitignore .dockerignore
       ```
 
@@ -302,8 +302,8 @@ Modify the Dockerfile as follows:
 
 To build a image for testing, run the following command to build a `test` image:
 
-```shell
-docker build -t test .
+```shell-session
+$ docker build -t test .
 [1/2] STEP 1/4: FROM node:16 AS build
 [1/2] STEP 2/4: WORKDIR /build
 --> 73bbc8c7552
@@ -332,8 +332,8 @@ Successfully tagged localhost/test:latest
 
 Start a container with the `test` image and run the `ls` command to see files in container:
 
-```shell
-docker run -i -t --entrypoint bash 9dd2
+```shell-session
+$ docker run -i -t --entrypoint bash 9dd2
 root@007:/# ls -la
 total 484
 dr-xr-xr-x.   1 root   root        28 Aug  6 06:43 .
