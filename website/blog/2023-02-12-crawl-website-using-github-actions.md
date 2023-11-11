@@ -19,7 +19,7 @@ After applying, you will receive an invitation email from Algolia DocSearch. Aft
 
 In the `docusaurus.config.js` file, add the following configuration:
 
-```js title="docusaurus.config.js"
+```javascript title="docusaurus.config.js"
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -46,7 +46,7 @@ To get `appId` and `apiKey`, follow the steps below:
 
 1. Log in to the [Algolia Dashboard](https://algolia.com/dashboard) and navigate to the [**API Keys**](https://www.algolia.com/account/api-keys/all) page.
 
-2. On the **API Keys** page, select your **Application** and you can see the **Application ID** (`appId`) and **Search APPI Key** (`apiKey`).
+2. On the **API Keys** page, select your **Application** and you can see the **Application ID** (`appId`) and **Search API Key** (`apiKey`).
 
 :::note
 

@@ -242,7 +242,7 @@ int main() {
 
 ### 伪代码
 
-```text
+```
 1. 生成一个 1 到 100 之间的随机数
 2. 用户输入一个数字 guess_number
 3. 如果 guess_number == random_number，则提示用户猜中，游戏结束

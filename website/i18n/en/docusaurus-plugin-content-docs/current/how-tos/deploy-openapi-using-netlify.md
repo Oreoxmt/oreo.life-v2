@@ -37,7 +37,7 @@ To get the repository content, you need to [create a personal access token](http
 
 The cURL code sample in GitHub Docs is as follows:
 
-```shell
+```bash
 curl \
   -H "Accept: application/vnd.github+json" \
   -H "Authorization: token <TOKEN>" \
@@ -46,7 +46,7 @@ curl \
 
 Replace `<TOKEN>` with your personal access token and replace `<OWNER>`, `<REPO>`, and `PATH` with the repository owner, repository name and the path of repository content you want to get. The following is an example:
 
-```shell
+```bash
 curl --request GET \
   --url https://api.github.com/repos/production/api/contents/open-api-swagger.json \
   --header 'Accept: application/vnd.github+json' \
@@ -80,7 +80,7 @@ The output is as follows:
 
 The preceding `"content"` is a base64 encoded string of the `open-api-swagger.json` file. To decode the file, you can refer to the [answer in Stack Overflow](https://stackoverflow.com/a/70136393) using the following command:
 
-```shell
+```bash
 curl --request GET \
   --url https://api.github.com/repos/production/api/contents/open-api-swagger.json \
   --header 'Accept: application/vnd.github+json' \
@@ -104,7 +104,7 @@ The output is as follows:
 
 It is not reasonable to use the `base64` command to decode. So, I read the [About the Repository contents API](https://docs.github.com/en/rest/repos/contents#about-the-repository-contents-api) again. To retrieve the contents of the JSON file, you can use the `.raw` media type. The following is an example:
 
-```shell
+```bash
 curl --request GET \
   --url https://api.github.com/repos/production/api/contents/open-api-swagger.json \
   // highlight-start
@@ -135,7 +135,7 @@ After the step 2, you can get the JSON content of the `open-api-swagger.json` fi
 
     It is easy to [declare variables](https://docs.netlify.com/configure-builds/environment-variables/#declare-variables). In the Netlify UI, under **Site settings > Build & deploy > Environment > Environment variables**, you can click **Edit variables** and create a new variable named `GITHUB_TOKEN`. To use the variable in build commands, the following is an example:
 
-    ```shell
+    ```bash
     curl --request GET \
     --url https://api.github.com/repos/production/api/contents/open-api-swagger.json \
     --header 'Accept: application/vnd.github.raw' \
@@ -150,7 +150,7 @@ After the step 2, you can get the JSON content of the `open-api-swagger.json` fi
 
   Single quotes won't interpolate anything, but double quotes will. For example: variables, backticks, certain `\` escapes, etc.
 
-  ```shell
+  ```shell-session
   $ echo "$(echo "upg")"
   upg
   $ echo '$(echo "upg")'
@@ -165,7 +165,7 @@ After the step 2, you can get the JSON content of the `open-api-swagger.json` fi
 
     To build the specification file into a HTML file, you can use the following [`redoc-cli build`](https://redocly.com/docs/redoc/deployment/cli/#redoc-cli-commands) command:
 
-    ```shell
+    ```bash
     redoc-cli build openapi-spec.swagger.json -o build/index.html
     ```
 
@@ -175,7 +175,7 @@ After the step 2, you can get the JSON content of the `open-api-swagger.json` fi
 
     - Set the build command to the following:
 
-    ```shell
+    ```bash
     curl --request GET --url https://api.github.com/repos/production/api/contents/open-api-swagger.json --header 'Accept: application/vnd.github.raw' --header "Authorization: token $GITHUB_TOKEN" -O && redoc-cli build openapi-spec.swagger.json -o build/index.html
     ```
 
