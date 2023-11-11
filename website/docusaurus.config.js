@@ -1,11 +1,10 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+export default {
   title: 'On my way to Oodi',
   tagline: '"Siempre imaginé que el paraíso sería algún tipo de biblioteca"',
   url: 'https://oreo.life',
@@ -50,7 +49,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/Oreoxmt/oreo.life-v2',
+              'https://github.com/Oreoxmt/oreo.life-v2',
         },
         blog: {
           blogTitle: "Oreo's blog",
@@ -70,103 +69,116 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      /*announcementBar: {
-        id: 'support-us',
-        content: 'Star me on <a target="_blank" rel="noopener noreferrer" href="https://github.com/Oreoxmt">GitHub</a>!',
-        backgroundColor: '#fafafa',
-        textColor: '#333',
-        isCloseable: true,
-      },*/
-      navbar: {
-        title: 'Oreo\'s way to Oodi',
-        hideOnScroll: true,
-        logo: {
-          alt: 'Oreo',
-          src: 'img/logo.png',
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+      ({
+        /*announcementBar: {
+          id: 'support-us',
+          content: 'Star me on <a target="_blank" rel="noopener noreferrer" href="https://github.com/Oreoxmt">GitHub</a>!',
+          backgroundColor: '#fafafa',
+          textColor: '#333',
+          isCloseable: true,
+        },*/
+        navbar: {
+          title: 'Oreo\'s way to Oodi',
+          hideOnScroll: true,
+          logo: {
+            alt: 'Oreo',
+            src: 'img/logo.png',
+          },
+          items: [
+            {
+              type: 'search',
+              position: 'left',
+            },
+            {
+              type: 'localeDropdown',
+              position: 'right',
+            },
+            {
+              type: 'doc',
+              docId: 'intro',
+              position: 'right',
+              label: 'Notes',
+            },
+            {
+              to: '/blog',
+              label: 'Blog',
+              position: 'right'
+            },
+            {
+              href: 'https://github.com/Oreoxmt',
+              label: 'GitHub',
+              position: 'right',
+            },
+          ],
         },
-        items: [
-          {
-            type: 'search',
-            position: 'left',
-          },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'right',
-            label: 'Notes',
-          },
-          { to: '/blog', label: 'Blog', position: 'right' },
-          {
-            href: 'https://github.com/Oreoxmt',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        /*links: [
-          {
-            title: 'Notes',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Tools',
-            items: [
-              {
-                label: 'Docusaurus',
-                href: 'https://github.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/Oreoxmt',
-              },
-            ],
-          },
-        ],*/
-        copyright: `Copyright © ${new Date().getFullYear()} Oreo. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-        additionalLanguages: ['docker', 'rust', 'cpp', 'cmake'],
-      },
-      colorMode: {
-        respectPrefersColorScheme: true,
-      },
-      algolia: {
-        appId: '3EPKB2DNI5',
-        apiKey: '3d350d4d4294747e2f651af8dba69e01',
-        indexName: 'oreo',
-        contextualSearch: true,
-      },
-      docs: {
-        sidebar: {
-          hideable: true, // make the entire sidebar hideable
-          autoCollapseCategories: true, // auto collapse categories
-        }
-      },
-    }),
+        footer: {
+          style: 'dark',
+          /*links: [
+            {
+              title: 'Notes',
+              items: [
+                {
+                  label: 'Tutorial',
+                  to: '/docs/intro',
+                },
+              ],
+            },
+            {
+              title: 'Tools',
+              items: [
+                {
+                  label: 'Docusaurus',
+                  href: 'https://github.com/docusaurus',
+                },
+              ],
+            },
+            {
+              title: 'More',
+              items: [
+                {
+                  label: 'Blog',
+                  to: '/blog',
+                },
+                {
+                  label: 'GitHub',
+                  href: 'https://github.com/Oreoxmt',
+                },
+              ],
+            },
+          ],*/
+          copyright: `Copyright © ${new Date().getFullYear()} Oreo. Built with Docusaurus.`,
+        },
+        prism: {
+          theme: prismThemes.github,
+          darkTheme: prismThemes.dracula,
+          additionalLanguages: [
+            'bash',
+            'cmake',
+            'diff',
+            'docker',
+            'ini',
+            'javascript',
+            'json',
+            'python',
+            'rust',
+            'shell-session'
+          ],
+        },
+        colorMode: {
+          respectPrefersColorScheme: true,
+        },
+        algolia: {
+          appId: '3EPKB2DNI5',
+          apiKey: '3d350d4d4294747e2f651af8dba69e01',
+          indexName: 'oreo',
+          contextualSearch: true,
+        },
+        docs: {
+          sidebar: {
+            hideable: true, // make the entire sidebar hideable
+            autoCollapseCategories: true, // auto collapse categories
+          }
+        },
+      }),
 };
-
-module.exports = config;
