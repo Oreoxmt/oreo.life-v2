@@ -51,6 +51,53 @@ git log
 
 For more information about how to fetch the remaining commits, refer to [How to fetch the remaining commits after creating a shallow clone](#how-to-fetch-the-remaining-commits-after-creating-a-shallow-clone).
 
+## [`git commit`](https://git-scm.com/docs/git-commit)
+
+### How to create an empty commit?
+
+To create an empty commit, you can use the `--allow-empty` option.
+
+<Tabs>
+  <TabItem value="command" label="Command">
+
+  ```bash
+  git commit --allow-empty -m "init commit"
+  ```
+
+  </TabItem>
+  <TabItem value="output" label="Output">
+
+  ```bash
+  [main (root-commit) 0b090a0] init commit
+  ```
+
+  </TabItem>
+</Tabs>
+
+You can also use the `--allow-empty-message` option to create an empty commit with an empty commit message.
+
+<Tabs>
+  <TabItem value="command" label="Command">
+
+  ```bash
+  git commit --allow-empty-message --allow-empty
+  ```
+
+  </TabItem>
+  <TabItem value="output" label="Output">
+
+  ```bash
+  [main 0b090a0]
+  ```
+
+  </TabItem>
+</Tabs>
+
+This is useful in the following scenarios:
+
+- to create the first commit of a new project (initial commit)
+- to trigger a CI/CD pipeline
+
 ## [`git fetch`](https://git-scm.com/docs/git-fetch)
 
 ### How to fetch the remaining commits after creating a shallow clone?
