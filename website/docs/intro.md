@@ -20,3 +20,11 @@ sidebar_position: 1
 
 - kblack's [Recycle Bin](https://blog.i64d.com)
 - JTJL's [U.M.R Blog](https://jtjl.github.io)
+
+  _随机打开一篇 Random 料理实验室决定今日晚餐_
+
+- sqybi's [SQYBI.com](https://sqybi.com)
+
+  _Change is a part of life and takes part in finding us who we are._
+
+  _[时隔十年的重新上线](https://sqybi.com/blog/sqybi-com-relaunching-after-a-decade/)，说不定你也会坚定生活的真谛_
