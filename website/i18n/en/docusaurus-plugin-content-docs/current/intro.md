@@ -18,3 +18,11 @@ sidebar_position: 1
 
 - kblack's [Recycle Bin](https://blog.i64d.com)
 - JTJL's [U.M.R Blog](https://jtjl.github.io)
+
+  _Open a random post from Random 料理实验室 to decide today's dinner_
+
+- sqybi's [SQYBI.com](https://sqybi.com)
+
+  _Change is a part of life and takes part in finding us who we are._
+
+  _[Relaunching After a Decade](https://sqybi.com/en-US/blog/sqybi-com-relaunching-after-a-decade/) might help you find the true meaning of life_
