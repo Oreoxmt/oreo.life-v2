@@ -53,8 +53,9 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'how-tos/python-test-shell-scripts',
         'python/time-in-python',
+        'python/python-iterator',
+        'how-tos/python-test-shell-scripts',
         'how-tos/manage-python-project-using-poetry',
         {
           type: 'category',
