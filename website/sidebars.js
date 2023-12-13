@@ -47,6 +47,16 @@ const sidebars = {
     'git-wiki',
     {
       type: 'category',
+      label: 'C++',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'cpp/cpp-wiki'
+      ],
+    },
+    {
+      type: 'category',
       label: 'Python',
       // Use link to generate index page for each category
       link: {
