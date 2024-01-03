@@ -25,6 +25,9 @@ echo "./test.md" | sed 's~^./~~'
 # test.md
 ```
 
+<codapi-snippet sandbox="bash" editor="basic" init-delay="500">
+</codapi-snippet>
+
 In the preceding substitution command <code>s~**^./**~~</code>:
 
 - `s` is the `sed` command that specifies a string substitution.
@@ -48,5 +51,8 @@ To use [extended regular expressions](https://www.gnu.org/software/sed/manual/se
 echo "12345678,test.md,..." | sed -E 's~^[0-9]+,~~'
 # test.md,...
 ```
+
+<codapi-snippet sandbox="bash" editor="basic" init-delay="500">
+</codapi-snippet>
 
 For more details, refer to [`--regexp-extended`](https://www.gnu.org/software/sed/manual/sed.html).

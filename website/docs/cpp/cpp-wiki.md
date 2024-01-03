@@ -19,6 +19,9 @@ int main() {
 }
 ```
 
+<codapi-snippet sandbox="cpp" editor="basic" init-delay="500">
+</codapi-snippet>
+
 To avoid the preceding error, use the following code instead:
 
 ```cpp
@@ -29,3 +32,6 @@ int main() {
     std::cout << max << std::endl; // 0
 }
 ```
+
+<codapi-snippet sandbox="cpp" editor="basic" init-delay="500">
+</codapi-snippet>

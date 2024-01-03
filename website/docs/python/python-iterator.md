@@ -19,6 +19,9 @@ for item in a:
     print(item)
 ```
 
+<codapi-snippet sandbox="python" editor="basic" init-delay="500">
+</codapi-snippet>
+
 The output is as follows:
 
 ```shell

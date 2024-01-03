@@ -12,7 +12,11 @@ export default {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
-
+  stylesheets: [
+      {
+          href: "https://unpkg.com/@antonz/codapi@0.10.2/dist/snippet.css",
+      },
+  ],
   scripts: [
     {
       src: 'https://platform.twitter.com/widgets.js',
@@ -22,6 +26,10 @@ export default {
       src: 'https://umm.oreo.life/juicy.js',
       async: true,
       'data-website-id': '7a07d44e-77c0-43c5-aaa3-5071404be998'
+    },
+    {
+      src: "https://unpkg.com/@antonz/codapi@0.10.2/dist/snippet.js",
+      defer: true,
     }
   ],
 
