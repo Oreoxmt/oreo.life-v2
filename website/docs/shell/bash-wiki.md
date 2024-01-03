@@ -63,6 +63,9 @@ var="test-123"
 echo "${var#test-}" # 123
 ```
 
+<codapi-snippet sandbox="bash" editor="basic" init-delay="500">
+</codapi-snippet>
+
 When you use `find ${DIR_PATH}` command to search for files, the result will be prefixed with `${DIR_PATH}`. To remove the prefix, you can use the `#` operator. For example:
 
 ```bash
@@ -131,6 +134,9 @@ echo "${var#*test-}" # test-123
 echo "${var##*test-}" # 123
 ```
 
+<codapi-snippet sandbox="bash" editor="basic" init-delay="500">
+</codapi-snippet>
+
 In the following example, `a*b` pattern matches any sequence that starts with `a` and ends with `b`.
 
 ```bash
@@ -143,6 +149,9 @@ echo "${var#a*c}" # cc
 echo "${var##a*c}" #
 ```
 
+<codapi-snippet sandbox="bash" editor="basic" init-delay="500">
+</codapi-snippet>
+
 :::
 
 ### Remove the suffix using `%`
@@ -153,6 +162,9 @@ In `${parameter%word}`, `%` is used to remove the **shortest matching pattern** 
 var="test-123"
 echo "${var%-123}" # test
 ```
+
+<codapi-snippet sandbox="bash" editor="basic" init-delay="500">
+</codapi-snippet>
 
 :::tip
 
