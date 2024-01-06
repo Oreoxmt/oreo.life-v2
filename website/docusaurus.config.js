@@ -10,6 +10,7 @@ export default {
   url: 'https://oreo.life',
   baseUrl: '/',
   onBrokenLinks: 'throw',
+  onBrokenAnchors: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
   stylesheets: [

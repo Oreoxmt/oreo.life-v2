@@ -331,7 +331,7 @@ cd docs
 
 4. 使用 `sed -E 's~^[0-9]+,~~'` 去掉无意义的 Unix 时间戳：
 
-    > Wiki: [`sed -E 's/regexp/replacement/'`](/shell/sed-wiki.md#e--r---regexp-extended)
+    > Wiki: [`sed -E 's/regexp/replacement/'`](/shell/sed-wiki.md#-e--r---regexp-extended)
 
     <Tabs>
     <TabItem value="command" label="Command">

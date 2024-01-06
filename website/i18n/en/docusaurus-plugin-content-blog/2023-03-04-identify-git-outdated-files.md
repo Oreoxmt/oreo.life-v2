@@ -331,7 +331,7 @@ cd docs
 
 4. Remove the meaningless Unix timestamp using `sed -E 's~^[0-9]+,~~'`:
 
-    > Wiki: [`sed -E 's/regexp/replacement/'`](/shell/sed-wiki#e--r---regexp-extended)
+    > Wiki: [`sed -E 's/regexp/replacement/'`](/shell/sed-wiki#-e--r---regexp-extended)
 
     <Tabs>
     <TabItem value="command" label="Command">
