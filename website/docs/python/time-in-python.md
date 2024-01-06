@@ -51,7 +51,7 @@ print(time.time())
 # 1678526843.67069
 ```
 
-<codapi-snippet sandbox="python" editor="basic" init-delay="500">
+<codapi-snippet engine="wasi" sandbox="python" editor="basic" init-delay="500">
 </codapi-snippet>
 
 在计算时间差的场景时，如果使用 `time.time()`，那么计算的时间差可能不准确，甚至可能出现负数，具体原因可以参考[日历时钟](#日历时钟-time-of-day-clock)。
@@ -81,7 +81,7 @@ print(time.monotonic())
 # 672615.062683958
 ```
 
-<codapi-snippet sandbox="python" editor="basic" init-delay="500">
+<codapi-snippet engine="wasi" sandbox="python" editor="basic" init-delay="500">
 </codapi-snippet>
 
 在计算时间差的场景时，使用 `time.monotonic()` 可以保证计算的时间差不会出现负数，具体原因可以参考[单调时钟](#单调时钟-monotonic-clock)。
@@ -97,7 +97,7 @@ print(datetime.datetime.now())
 # 2023-03-11 17:33:59.999052
 ```
 
-<codapi-snippet sandbox="python" editor="basic" init-delay="500">
+<codapi-snippet engine="wasi" sandbox="python" editor="basic" init-delay="500">
 </codapi-snippet>
 
 在计算时间差的场景时，使用 `datetime.datetime.now()` 计算的时间差是 `timedelta` 对象，是更人类友好的时间差表示方式。但是 `datetime.datetime` 采用的是日历时钟，因此计算的时间差可能不准确，具体原因可以参考[日历时钟](#日历时钟-time-of-day-clock)。
