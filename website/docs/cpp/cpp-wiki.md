@@ -1,5 +1,5 @@
 ---
-title: "C++"
+title: "C++ wiki"
 description: "A collection of useful C++ usage and tips."
 ---
 
