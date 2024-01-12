@@ -85,11 +85,11 @@ C++ 中的输入输出可以通过 [`std::cin`](https://en.cppreference.com/w/cp
 ```cpp title="io.cpp"
 #include <iostream>
 
-int main(){
-    int a, b;
-    std::cout << "Enter two numbers: ";
-    std::cin >> a >> b;
-    std::cout << "The numbers you entered are: " << a << " and " << b << '\n';
+int main() {
+  int a, b;
+  std::cout << "Enter two numbers: ";
+  std::cin >> a >> b;
+  std::cout << "The numbers you entered are: " << a << " and " << b << '\n';
 }
 ```
 
@@ -137,11 +137,9 @@ int a = 5;
 ```cpp
 if (condition1) {
   // do this if condition1 is true
-}
-else if (condition2) {
+} else if (condition2) {
   // else this id condition2 is true
-}
-else {
+} else {
   // otherwise do this
 }
 ```
@@ -151,23 +149,17 @@ else {
 ```cpp title="condition.cpp"
 #include <iostream>
 
-int main()
-{
-    int i = 0;
-    std::cout << "Enter a number: ";
-    std::cin >> i;
-    if (i == 0)
-    {
-        std::cout << "zero\n";
-    }
-    else if (i > 0)
-    {
-        std::cout << "positive\n";
-    }
-    else
-    {
-        std::cout << "negative\n";
-    }
+int main() {
+  int i = 0;
+  std::cout << "Enter a number: ";
+  std::cin >> i;
+  if (i == 0) {
+    std::cout << "zero\n";
+  } else if (i > 0) {
+    std::cout << "positive\n";
+  } else {
+    std::cout << "negative\n";
+  }
 }
 ```
 
@@ -198,11 +190,11 @@ C++ 中的循环语句可以通过 `while`、`do while` 和 `for` 关键字来�
 #include <iostream>
 
 int main() {
-    int i = 5;
-    while (i < 10) {
-        std::cout << i << ' ';
-        i = i + 1;
-    }
+  int i = 5;
+  while (i < 10) {
+    std::cout << i << ' ';
+    i = i + 1;
+  }
 }
 ```
 
@@ -214,11 +206,11 @@ int main() {
 #include <iostream>
 
 int main() {
-    int i = 10;
-    do {
-        std::cout << i << ' ';
-        i = i + 1;
-    } while (i < 10);
+  int i = 10;
+  do {
+    std::cout << i << ' ';
+    i = i + 1;
+  } while (i < 10);
 }
 ```
 
@@ -230,9 +222,9 @@ int main() {
 #include <iostream>
 
 int main() {
-    for (int i = 5; i < 10; i = i + 1) {
-        std::cout << i << ' ';
-        }
+  for (int i = 5; i < 10; i = i + 1) {
+    std::cout << i << ' ';
+  }
 }
 ```
 
@@ -270,14 +262,13 @@ int main() {
 // highlight-next-line
 #include <random>
 
-int main()
-{
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(1, 100);
-    int answer = distrib(gen);
+int main() {
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> distrib(1, 100);
+  int answer = distrib(gen);
 
-    std::cout << "The answer is: " << answer;
+  std::cout << "The answer is: " << answer;
 }
 ```
 
@@ -289,22 +280,21 @@ int main()
 #include <iostream>
 #include <random>
 
-int main()
-{
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(1, 100);
-    int answer = distrib(gen);
+int main() {
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> distrib(1, 100);
+  int answer = distrib(gen);
 
-    std::cout << "The answer is: " << answer << '\n';
+  std::cout << "The answer is: " << answer << '\n';
 
-    // highlight-start
-    int guess_number;
-    std::cout << "Guess the number: ";
-    std::cin >> guess_number;
-    // highlight-end
+  // highlight-start
+  int guess_number;
+  std::cout << "Guess the number: ";
+  std::cin >> guess_number;
+  // highlight-end
 
-    std::cout << "The guess_number is: " << guess_number << '\n';
+  std::cout << "The guess_number is: " << guess_number << '\n';
 }
 ```
 
@@ -316,35 +306,29 @@ int main()
 #include <iostream>
 #include <random>
 
-int main()
-{
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(1, 100);
-    int answer = distrib(gen);
+int main() {
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> distrib(1, 100);
+  int answer = distrib(gen);
 
-    std::cout << "The answer is: " << answer << '\n';
+  std::cout << "The answer is: " << answer << '\n';
 
-    int guess_number;
-    std::cout << "Guess the number: ";
-    std::cin >> guess_number;
+  int guess_number;
+  std::cout << "Guess the number: ";
+  std::cin >> guess_number;
 
-    std::cout << "The guess_number is: " << guess_number << '\n';
+  std::cout << "The guess_number is: " << guess_number << '\n';
 
-    // highlight-start
-    if (guess_number == answer)
-    {
-        std::cout << "Congratulations!\n";
-    }
-    else if (guess_number < answer)
-    {
-        std::cout << "Guess a higher number!\n";
-    }
-    else
-    {
-        std::cout << "Guess a lower number!\n";
-    }
-    // highlight-end
+  // highlight-start
+  if (guess_number == answer) {
+    std::cout << "Congratulations!\n";
+  } else if (guess_number < answer) {
+    std::cout << "Guess a higher number!\n";
+  } else {
+    std::cout << "Guess a lower number!\n";
+  }
+  // highlight-end
 }
 ```
 
@@ -356,37 +340,30 @@ int main()
 #include <iostream>
 #include <random>
 
-int main()
-{
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(1, 100);
-    int answer = distrib(gen);
+int main() {
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> distrib(1, 100);
+  int answer = distrib(gen);
 
-    std::cout << "The answer is: " << answer << '\n';
+  std::cout << "The answer is: " << answer << '\n';
 
-    // highlight-next-line
-    while (true)
-    {
-        int guess_number;
-        std::cout << "Guess the number: ";
-        std::cin >> guess_number;
+  // highlight-next-line
+  while (true) {
+    int guess_number;
+    std::cout << "Guess the number: ";
+    std::cin >> guess_number;
 
-        if (guess_number == answer)
-        {
-            std::cout << "Congratulations!\n";
-            // highlight-next-line
-            break;
-        }
-        else if (guess_number < answer)
-        {
-            std::cout << "Guess a higher number!\n";
-        }
-        else
-        {
-            std::cout << "Guess a lower number!\n";
-        }
+    if (guess_number == answer) {
+      std::cout << "Congratulations!\n";
+      // highlight-next-line
+      break;
+    } else if (guess_number < answer) {
+      std::cout << "Guess a higher number!\n";
+    } else {
+      std::cout << "Guess a lower number!\n";
     }
+  }
 }
 ```
 
@@ -414,46 +391,41 @@ g++ --std=c++20 guess_number.cpp && ./a.out
 #include <iostream>
 #include <random>
 
-int main()
-{
-    // highlight-start
-    int min_val = 1;
-    int max_val = 100;
-    // highlight-end
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    // highlight-next-line
-    std::uniform_int_distribution<> distrib(min_val, max_val);
-    int answer = distrib(gen);
+int main() {
+  // highlight-start
+  int min_val = 1;
+  int max_val = 100;
+  // highlight-end
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  // highlight-next-line
+  std::uniform_int_distribution<> distrib(min_val, max_val);
+  int answer = distrib(gen);
 
-    std::cout << "The answer is: " << answer << '\n';
+  std::cout << "The answer is: " << answer << '\n';
 
-    while (true)
-    {
-        int guess_number;
-        std::cout << "Guess the number: ";
-        std::cin >> guess_number;
+  while (true) {
+    int guess_number;
+    std::cout << "Guess the number: ";
+    std::cin >> guess_number;
 
-        if (guess_number == answer)
-        {
-            std::cout << "Congratulations!\n";
-            break;
-        }
-        else if (guess_number < answer)
-        {
-            // highlight-start
-            min_val = guess_number + 1;
-            std::cout << "Guess the number from " << min_val << " to " << max_val << '\n';
-            // highlight-end
-        }
-        else
-        {
-            // highlight-start
-            max_val = guess_number - 1;
-            std::cout << "Guess the number from " << min_val << " to " << max_val << '\n';
-            // highlight-end
-        }
+    if (guess_number == answer) {
+      std::cout << "Congratulations!\n";
+      break;
+    } else if (guess_number < answer) {
+      // highlight-start
+      min_val = guess_number + 1;
+      std::cout << "Guess the number from " << min_val << " to " << max_val
+                << '\n';
+      // highlight-end
+    } else {
+      // highlight-start
+      max_val = guess_number - 1;
+      std::cout << "Guess the number from " << min_val << " to " << max_val
+                << '\n';
+      // highlight-end
     }
+  }
 }
 ```
 
@@ -478,41 +450,36 @@ g++ --std=c++20 guess_number.cpp && ./a.out
 #include <iostream>
 #include <random>
 
-int main()
-{
-    int min_val = 1;
-    int max_val = 100;
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(min_val, max_val);
-    int answer = distrib(gen);
+int main() {
+  int min_val = 1;
+  int max_val = 100;
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> distrib(min_val, max_val);
+  int answer = distrib(gen);
 
-    std::cout << "The answer is: " << answer << '\n';
+  std::cout << "The answer is: " << answer << '\n';
 
-    while (true)
-    {
-        int guess_number;
-        std::cout << "Guess the number: ";
-        std::cin >> guess_number;
+  while (true) {
+    int guess_number;
+    std::cout << "Guess the number: ";
+    std::cin >> guess_number;
 
-        if (guess_number == answer)
-        {
-            std::cout << "Congratulations!\n";
-            break;
-        }
-        else if (guess_number < answer)
-        {
-            // highlight-next-line
-            min_val = guess_number < min_val ? min_val : guess_number + 1;
-            std::cout << "Guess the number from " << min_val << " to " << max_val << '\n';
-        }
-        else
-        {
-            // highlight-next-line
-            max_val = guess_number > max_val ? max_val : guess_number - 1;
-            std::cout << "Guess the number from " << min_val << " to " << max_val << '\n';
-        }
+    if (guess_number == answer) {
+      std::cout << "Congratulations!\n";
+      break;
+    } else if (guess_number < answer) {
+      // highlight-next-line
+      min_val = guess_number < min_val ? min_val : guess_number + 1;
+      std::cout << "Guess the number from " << min_val << " to " << max_val
+                << '\n';
+    } else {
+      // highlight-next-line
+      max_val = guess_number > max_val ? max_val : guess_number - 1;
+      std::cout << "Guess the number from " << min_val << " to " << max_val
+                << '\n';
     }
+  }
 }
 ```
 
@@ -537,36 +504,31 @@ g++ --std=c++20 guess_number.cpp && ./a.out
 #include <iostream>
 #include <random>
 
-int main()
-{
-    int min_val = 1;
-    int max_val = 100;
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(min_val, max_val);
-    int answer = distrib(gen);
+int main() {
+  int min_val = 1;
+  int max_val = 100;
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  std::uniform_int_distribution<> distrib(min_val, max_val);
+  int answer = distrib(gen);
 
-    while (true)
-    {
-        int guess_number;
-        std::cout << "Guess the number: ";
-        std::cin >> guess_number;
+  while (true) {
+    int guess_number;
+    std::cout << "Guess the number: ";
+    std::cin >> guess_number;
 
-        if (guess_number == answer)
-        {
-            std::cout << "Congratulations!\n";
-            break;
-        }
-        else if (guess_number < answer)
-        {
-            min_val = guess_number < min_val ? min_val : guess_number + 1;
-            std::cout << "Guess the number from " << min_val << " to " << max_val << '\n';
-        }
-        else
-        {
-            max_val = guess_number > max_val ? max_val : guess_number - 1;
-            std::cout << "Guess the number from " << min_val << " to " << max_val << '\n';
-        }
+    if (guess_number == answer) {
+      std::cout << "Congratulations!\n";
+      break;
+    } else if (guess_number < answer) {
+      min_val = guess_number < min_val ? min_val : guess_number + 1;
+      std::cout << "Guess the number from " << min_val << " to " << max_val
+                << '\n';
+    } else {
+      max_val = guess_number > max_val ? max_val : guess_number - 1;
+      std::cout << "Guess the number from " << min_val << " to " << max_val
+                << '\n';
     }
+  }
 }
 ```

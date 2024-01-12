@@ -229,8 +229,9 @@ target_link_libraries(hello fmt::fmt)
 下面示例代码使用了 `std::cout`、`fmt::print` 和 `fmt::println` 三种方式进行字符串的输出：
 
 ```cpp title="cpp_learning/hacking_cpp/hello.cpp"
-#include <iostream>
 #include <fmt/format.h>
+
+#include <iostream>
 int main() {
   std::cout << "std::cout: Hello World\n";
   fmt::print("fmt::print: Hello!");
