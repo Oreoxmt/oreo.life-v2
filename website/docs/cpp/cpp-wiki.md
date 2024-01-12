@@ -200,35 +200,40 @@ The following example shows the duration for printing 100,000 numbers with `std:
   <TabItem label="Code" value="code">
 
   ```cpp
-  #include <iostream> // for cin, cout
-  #include <chrono> // for timers
+  #include <chrono>    // for timers
+  #include <iostream>  // for cin, cout
   
   int endl_each_time(int n = 10000) {
-      const auto start_time = std::chrono::high_resolution_clock::now();
-      for (int i = 0; i < n; i++) {
-          std::cout << i << std::endl;
-      }
-      const auto end_time = std::chrono::high_resolution_clock::now();
-      auto duration_ns = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
-      return duration_ns.count();
+    const auto start_time = std::chrono::steady_clock::now();
+    for (int i = 0; i < n; i++) {
+      std::cout << i << std::endl;
+    }
+    const auto end_time = std::chrono::steady_clock::now();
+    auto duration_ns = std::chrono::duration_cast<std::chrono::microseconds>(
+        end_time - start_time);
+    return duration_ns.count();
   }
   
   int new_line_each_time(int n = 10000) {
-      const auto start_time = std::chrono::high_resolution_clock::now();
-      for (int i = 0; i < n; i++) {
-          std::cout << i << "\n";
-      }
-      const auto end_time = std::chrono::high_resolution_clock::now();
-      const auto duration_ns = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
-      return duration_ns.count();
+    const auto start_time = std::chrono::steady_clock::now();
+    for (int i = 0; i < n; i++) {
+      std::cout << i << "\n";
+    }
+    const auto end_time = std::chrono::steady_clock::now();
+    const auto duration_ns =
+        std::chrono::duration_cast<std::chrono::microseconds>(end_time -
+                                                              start_time);
+    return duration_ns.count();
   }
   
   int main() {
-      int endl_duration = endl_each_time();
-      int new_line_duration = new_line_each_time();
-      std::cout << "endl_each_time duration: " << endl_duration << "ns" << std::endl;
-      std::cout << "new_line_each_time duration: " << new_line_duration << "ns" << std::endl;
-      return 0;
+    int endl_duration = endl_each_time();
+    int new_line_duration = new_line_each_time();
+    std::cout << "endl_each_time duration: " << endl_duration << "ns"
+              << std::endl;
+    std::cout << "new_line_each_time duration: " << new_line_duration << "ns"
+              << std::endl;
+    return 0;
   }
   ```
 
