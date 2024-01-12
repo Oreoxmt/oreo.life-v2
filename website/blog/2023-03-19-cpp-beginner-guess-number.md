@@ -197,6 +197,8 @@ int main() {
   }
 }
 ```
+<codapi-snippet sandbox="cpp" init-delay="500">
+</codapi-snippet>
 
 ### `do ... while`
 
@@ -213,6 +215,8 @@ int main() {
   } while (i < 10);
 }
 ```
+<codapi-snippet sandbox="cpp" init-delay="500">
+</codapi-snippet>
 
 #### `for`
 
@@ -227,6 +231,9 @@ int main() {
   }
 }
 ```
+<codapi-snippet sandbox="cpp" init-delay="500">
+</codapi-snippet>
+
 
 ## 实践：猜数字游戏
 
@@ -271,6 +278,8 @@ int main() {
   std::cout << "The answer is: " << answer;
 }
 ```
+<codapi-snippet sandbox="cpp" init-delay="500">
+</codapi-snippet>
 
 ### 处理用户输入
 
@@ -297,6 +306,8 @@ int main() {
   std::cout << "The guess_number is: " << guess_number << '\n';
 }
 ```
+<codapi-snippet sandbox="cpp" init-delay="500">
+</codapi-snippet>
 
 ### 判断用户输入的数字是否正确
 
