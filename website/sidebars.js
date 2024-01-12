@@ -52,7 +52,9 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'cpp/cpp-wiki'
+        'cpp/cpp-wiki',
+        'cpp/stringtoint-stringstream',
+        'cpp/guess-number',
       ],
     },
     {
