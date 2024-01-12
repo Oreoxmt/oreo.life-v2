@@ -5,8 +5,10 @@ authors: [Oreo]
 tags: [C++, CS106L]
 ---
 
+```mdx-code-block
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+```
 
 During the CS 106L course, I learned a lot of C++ streams. This document describes how to use [`basic_stringstream`](https://en.cppreference.com/w/cpp/io/basic_stringstream) to get an integer from a string.
 
