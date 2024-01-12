@@ -1,16 +1,13 @@
 ---
-slug: 2023-03-19-cpp-beginner-guess-number
-title: "C++ Beginner's Guide: Building a Guess Number Game"
-authors: [Oreo]
-tags: [C++]
+title: "Building a Guess Number Game"
 ---
 
+```mdx-code-block
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+```
 
 这篇博客记录了我跟着 [C++ Beginner's Guide](https://hackingcpp.com/cpp/beginners_guide.html) 学习 C++ 的第一天，并通过一个猜数字游戏的实践来加深对 I/O、基本数据类型、控制流等基础知识的理解。
-
-<!--truncate-->
 
 ## 准备开发环境
 

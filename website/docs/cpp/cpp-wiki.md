@@ -1,5 +1,5 @@
 ---
-title: "C++"
+title: "C++ wiki"
 description: "A collection of useful C++ usage and tips."
 ---
 
@@ -20,7 +20,7 @@ using namespace std;
 
 int max = 0;
 int main() {
-    cout << max << endl; // error: reference to 'max' is ambiguous
+  cout << max << endl;  // error: reference to 'max' is ambiguous
 }
 ```
 
@@ -34,7 +34,7 @@ To avoid the preceding error, use the following code instead:
 
 int max = 0;
 int main() {
-    std::cout << max << std::endl; // 0
+  std::cout << max << std::endl;  // 0
 }
 ```
 
@@ -54,11 +54,11 @@ The following code examples show the difference between using `std::endl` and no
 
   ```cpp
   #include <iostream>
-
+  
   int main() {
-      for (int i=0; i<5; i++) {
-          std::cout << i << std::endl;
-      }
+    for (int i = 0; i < 5; i++) {
+      std::cout << i << std::endl;
+    }
   }
   // 0
   // 1
@@ -74,11 +74,11 @@ The following code examples show the difference between using `std::endl` and no
 
   ```cpp
   #include <iostream>
-
+  
   int main() {
-      for (int i=0; i<5; i++) {
-          std::cout << i; // 01234
-      }
+    for (int i = 0; i < 5; i++) {
+      std::cout << i;  // 01234
+    }
   }
   ```
   <codapi-snippet sandbox="cpp" editor="basic" init-delay="500">
@@ -106,14 +106,15 @@ The following code examples show the same output with `std::endl` and `\n` in st
   <TabItem label="Use std::endl in standard output" value="std_endl_std_out">
 
   ```cpp name="std_endl.cpp"
-  #include <iostream>
   #include <unistd.h>
-
+  
+  #include <iostream>
+  
   int main() {
-      for (int i=0; i<5; i++) {
-          sleep(1);
-          std::cout << i << std::endl;
-      }
+    for (int i = 0; i < 5; i++) {
+      sleep(1);
+      std::cout << i << std::endl;
+    }
   }
   // Sleep 1 second
   // 0
@@ -131,14 +132,15 @@ The following code examples show the same output with `std::endl` and `\n` in st
   <TabItem label="Use new line character in standard output" value="new_line_std_out">
 
   ```cpp name="new_line_character.cpp"
-  #include <iostream>
   #include <unistd.h>
-
+  
+  #include <iostream>
+  
   int main() {
-      for (int i=0; i<5; i++) {
-          sleep(1);
-          std::cout << i << "\n";
-      }
+    for (int i = 0; i < 5; i++) {
+      sleep(1);
+      std::cout << i << "\n";
+    }
   }
   // Sleep 1 second
   // 0
@@ -200,35 +202,40 @@ The following example shows the duration for printing 100,000 numbers with `std:
   <TabItem label="Code" value="code">
 
   ```cpp
-  #include <iostream> // for cin, cout
-  #include <chrono> // for timers
+  #include <chrono>    // for timers
+  #include <iostream>  // for cin, cout
   
   int endl_each_time(int n = 10000) {
-      const auto start_time = std::chrono::high_resolution_clock::now();
-      for (int i = 0; i < n; i++) {
-          std::cout << i << std::endl;
-      }
-      const auto end_time = std::chrono::high_resolution_clock::now();
-      auto duration_ns = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
-      return duration_ns.count();
+    const auto start_time = std::chrono::steady_clock::now();
+    for (int i = 0; i < n; i++) {
+      std::cout << i << std::endl;
+    }
+    const auto end_time = std::chrono::steady_clock::now();
+    auto duration_ns = std::chrono::duration_cast<std::chrono::microseconds>(
+        end_time - start_time);
+    return duration_ns.count();
   }
   
   int new_line_each_time(int n = 10000) {
-      const auto start_time = std::chrono::high_resolution_clock::now();
-      for (int i = 0; i < n; i++) {
-          std::cout << i << "\n";
-      }
-      const auto end_time = std::chrono::high_resolution_clock::now();
-      const auto duration_ns = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
-      return duration_ns.count();
+    const auto start_time = std::chrono::steady_clock::now();
+    for (int i = 0; i < n; i++) {
+      std::cout << i << "\n";
+    }
+    const auto end_time = std::chrono::steady_clock::now();
+    const auto duration_ns =
+        std::chrono::duration_cast<std::chrono::microseconds>(end_time -
+                                                              start_time);
+    return duration_ns.count();
   }
   
   int main() {
-      int endl_duration = endl_each_time();
-      int new_line_duration = new_line_each_time();
-      std::cout << "endl_each_time duration: " << endl_duration << "ns" << std::endl;
-      std::cout << "new_line_each_time duration: " << new_line_duration << "ns" << std::endl;
-      return 0;
+    int endl_duration = endl_each_time();
+    int new_line_duration = new_line_each_time();
+    std::cout << "endl_each_time duration: " << endl_duration << "ns"
+              << std::endl;
+    std::cout << "new_line_each_time duration: " << new_line_duration << "ns"
+              << std::endl;
+    return 0;
   }
   ```
 
@@ -238,8 +245,8 @@ The following example shows the duration for printing 100,000 numbers with `std:
   ```shell
   ...
   9999
-  endl_each_time duration: 9717ns
-  new_line_each_time duration: 8896ns
+  endl_each_time duration: 15699ns
+  new_line_each_time duration: 10613ns
   ```
 
   </TabItem>
