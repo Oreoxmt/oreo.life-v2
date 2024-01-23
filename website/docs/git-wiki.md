@@ -322,3 +322,15 @@ git rebase -i {COMMIT_HASH} --signoff
 ```
 
 For more information, see [`git rebase --gpg-sign`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---gpg-signltkeyidgt) and [`git rebase --signoff`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---signoff).
+
+## [`git remote`](https://git-scm.com/docs/git-remote)
+
+### How to remove multiple remotes except for the `origin` and `upstream` remotes?
+
+```bash
+git remote | grep -vE '^(origin|upstream)$' | xargs -L1 git remote remove
+```
+
+1. `git remote` lists all of the remote names.
+2. `grep -vE '^(origin|upstream)$'` filters out the `origin` and `upstream` remotes.
+3. `xargs -L1 git remote remove`: for each remote, `xargs` runs the `git remote remove` command with the remote name as the argument.
