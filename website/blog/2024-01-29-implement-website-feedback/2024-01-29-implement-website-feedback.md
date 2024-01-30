@@ -141,7 +141,7 @@ Given that this feature is not officially documented, you can monitor the feedba
 
 ![img_2.png](writerside_feedback_submit.png)
 
-After clicking **Sen feedback**, you will notice that a request is sent to the feedback URL `https://www.test.com` with the feedback information in the request payload.
+After clicking **Send feedback**, you will notice that a request is sent to the feedback URL `https://www.test.com` with the feedback information in the request payload.
 
 ```json
 {
@@ -246,7 +246,7 @@ Therefore, it is necessary to have a server in place to receive this request and
 
 6. Trigger the `deploy.yml` workflow again. After the deployment is completed, you can submit a feedback and observe its response using the developer mode of your browser.
 
-  You will notice that the feedback submission results in a `401` response. This happens because the endpoint lacks authentication. To securely manage this, consider using Cloudflare Pages Functions to send the request, as it enables you to keep the token secret.
+  You will notice that the feedback submission results in a `401` response. This happens because the endpoint lacks authentication. To make your API keys secure, consider using Cloudflare Pages Functions to send the request, as it enables you to keep the token secret.
 
 ## 4. Configure Cloudflare Pages Functions to forward the feedback request
 
