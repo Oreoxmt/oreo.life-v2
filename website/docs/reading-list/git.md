@@ -6,10 +6,10 @@ description: "Something I have learned about Git"
 
 ## Lists
 
-| Reading List | Inspiration |
-| :---: | :---: |
-| [Things I wish everyone knew about Git (Part I)](#git-part-1) | _The opposite of `git-push` is not `git-pull`._ |
-| [Things I wish everyone knew about Git (Part II)](#git-part-2) | _Good advice is commit early and often_ |
+|                          Reading List                          |                   Inspiration                   |
+|:--------------------------------------------------------------:|:-----------------------------------------------:|
+| [Things I wish everyone knew about Git (Part I)](#git-part-1)  | _The opposite of `git-push` is not `git-pull`._ |
+| [Things I wish everyone knew about Git (Part II)](#git-part-2) |     _Good advice is commit early and often_     |
 
 ## [Things I wish everyone knew about Git (Part I)](https://blog.plover.com/prog/git/tips.html) {#git-part-1}
 

@@ -310,7 +310,7 @@ This section describes how to integrate Bytebase with TiDB Cloud.
 
 - Do you encounter any difficulties when deploying Bytebase?
 
-  Yes. As Bytebase is only available in x86 architecture, binary translation is required to run it on the M1 chip. However, when I tried to run Bytebase in a Ubuntu 22.04 ARM virtual machine (set up by UTM with Apple Virtualization backend), the container crashed due to a segmentation fault. Strangely, Bytebase runs without any problem in podman's virtual machine. The crash no longer occurred after I switched the x86 binary interpreter from Rosetta to QEMU. Something is likely incompatible with Rosetta.
+  Yes. As Bytebase is only available in x86 architecture, binary translation is required to run it on the M1 chip. However, when I tried to run Bytebase in an Ubuntu 22.04 ARM virtual machine (set up by UTM with Apple Virtualization backend), the container crashed due to a segmentation fault. Strangely, Bytebase runs without any problem in Podman's virtual machine. The crash no longer occurred after I switched the x86 binary interpreter from Rosetta to QEMU. Something is likely incompatible with Rosetta.
 
 - Does the SQL editor meet your needs?
 

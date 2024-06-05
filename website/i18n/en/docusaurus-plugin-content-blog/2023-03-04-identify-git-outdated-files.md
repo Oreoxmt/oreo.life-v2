@@ -75,7 +75,7 @@ brew install gnu-sed findutils
     git checkout {BRANCH}
     ```
 
-3. Run the `generate_last_commit_report.sh` script to generate a report in markdown format. The first argument `{DOC_REPO}` is the path to the documentation repository, and the second argument `{OWNER}/{REPO}` is the repository name on GitHub:
+3. Run the `generate_last_commit_report.sh` script to generate a report in Markdown format. The first argument `{DOC_REPO}` is the path to the documentation repository, and the second argument `{OWNER}/{REPO}` is the repository name on GitHub:
 
     ```bash
     ./scripts/generate_last_commit_report.sh {DOC_REPO} {OWNER}/{REPO}
@@ -198,7 +198,7 @@ cd docs
 
 ### Step 2: Get the last commit of a repository and sort by commit date
 
-1. Get **all markdown files** in a repository:
+1. Get **all Markdown files** in a repository:
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -223,7 +223,7 @@ cd docs
     </TabItem>
     </Tabs>
 
-    The preceding command uses a `for` loop to iterate all markdown files. If there is a file with a space in its name, the command handles it incorrectly. For example:
+    The preceding command uses a `for` loop to iterate all Markdown files. If there is a file with a space in its name, the command handles it incorrectly. For example:
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -269,7 +269,7 @@ cd docs
     done
     ```
 
-2. Get the last commit log of **all markdown files in a repository**:
+2. Get the last commit log of **all Markdown files in a repository**:
 
     <Tabs>
     <TabItem value="command" label="Command">
@@ -399,6 +399,7 @@ To make the report more readable, the following steps generate a Markdown table 
     </Tabs>
 
 2. Add a link to the `FILE` file using the GitHub repository address, commit hash value, and file name:
+
     <Tabs>
     <TabItem value="command" label="Command">
 

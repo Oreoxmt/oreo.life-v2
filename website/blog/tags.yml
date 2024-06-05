@@ -1,0 +1,74 @@
+C++:
+  label: 'C++'
+  description: 'Blog posts related to C++'
+  permalink: /cpp
+
+Git:
+  label: 'Git'
+  description: 'Blog posts related to Git'
+  permalink: /git
+
+GitHub Actions:
+  label: 'GitHub Actions'
+  description: 'Blog posts related to GitHub Actions'
+  permalink: /gitHub-actions
+
+GitHub API:
+  label: 'GitHub API'
+  description: 'Blog posts related to GitHub API'
+  permalink: /gitHub-api
+
+Hexo:
+  label: 'Hexo'
+  description: 'Blog posts related to Hexo'
+  permalink: /hexo
+
+How-tos:
+  label: 'How-tos'
+  description: 'Introduce how to ...'
+  permalink: /how-tos
+
+OpenAPI:
+  label: 'OpenAPI'
+  description: 'Blog posts related to OpenAPI'
+  permalink: /openAPI
+
+Poetry:
+  label: 'Poetry'
+  description: 'Blog posts related to Poetry'
+  permalink: /poetry
+
+Python:
+  label: 'Python'
+  description: 'Blog posts related to Python'
+  permalink: /python
+
+Reading List:
+  label: 'Reading List'
+  description: 'My reading list'
+  permalink: /reading-list
+
+Shell:
+  label: 'Shell'
+  description: 'Blog posts related to Shell'
+  permalink: /shell
+
+Technical Writing:
+  label: 'Technical Writing'
+  description: 'Blog posts related to technical writing'
+  permalink: /technical-writing
+
+TiDB Cloud:
+  label: 'TiDB Cloud'
+  description: 'Blog posts related to TiDB Cloud'
+  permalink: /tiDB-cloud
+
+Tips & Tricks:
+  label: 'Tips & Tricks'
+  description: 'Introduce some tips and tricks'
+  permalink: /tips-tricks
+
+Writerside:
+  label: 'Writerside'
+  description: 'Blog posts related to Writerside'
+  permalink: /writerside

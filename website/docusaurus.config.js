@@ -15,7 +15,7 @@ export default {
   favicon: 'img/logo.png',
   stylesheets: [
       {
-          href: "https://unpkg.com/@antonz/codapi@0.13.0/dist/snippet.css",
+          href: "https://unpkg.com/@antonz/codapi@0.19.7/dist/snippet.css",
       },
   ],
   scripts: [
@@ -29,7 +29,7 @@ export default {
       'data-website-id': '7a07d44e-77c0-43c5-aaa3-5071404be998'
     },
     {
-      src: "https://unpkg.com/@antonz/codapi@0.13.0/dist/snippet.js",
+      src: "https://unpkg.com/@antonz/codapi@0.19.7/dist/snippet.js",
       defer: true,
     },
     {
@@ -37,7 +37,7 @@ export default {
       defer: true,
     },
     {
-      src: "https://unpkg.com/@antonz/codapi@0.13.0/dist/engine/wasi.js",
+      src: "https://unpkg.com/@antonz/codapi@0.19.7/dist/engine/wasi.js",
       defer: true,
     }
   ],
@@ -71,8 +71,21 @@ export default {
         blog: {
           blogTitle: "Oreo's blog",
           postsPerPage: 'ALL',
+          blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
           showReadingTime: true,
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} Oreo. Built with Docusaurus.`,
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              return defaultCreateFeedItems({
+                // keep only the 15 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 15),
+                ...rest,
+              });
+            },
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
