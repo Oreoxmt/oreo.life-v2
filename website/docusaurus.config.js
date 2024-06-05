@@ -71,8 +71,21 @@ export default {
         blog: {
           blogTitle: "Oreo's blog",
           postsPerPage: 'ALL',
+          blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
           showReadingTime: true,
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} Oreo. Built with Docusaurus.`,
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              return defaultCreateFeedItems({
+                // keep only the 15 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 15),
+                ...rest,
+              });
+            },
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
