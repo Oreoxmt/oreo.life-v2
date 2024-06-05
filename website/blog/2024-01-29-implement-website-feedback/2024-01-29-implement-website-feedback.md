@@ -216,14 +216,14 @@ Therefore, it is necessary to have a server in place to receive this request and
 
   - Configure the parameters as follows:
   
-    | Parameter | Type | Description |
-    | --- | --- | --- |
-    | articleId | String | The article ID. |
-    | content | String | The feedback content. |
-    | email | String | The feedback user email. |
-    | name | String | The feedback user name. |
-    | title | String | The page title. |
-    | url | String | The page URL. |
+    | Parameter | Type   | Description              |
+    |-----------|--------|--------------------------|
+    | articleId | String | The article ID.          |
+    | content   | String | The feedback content.    |
+    | email     | String | The feedback user email. |
+    | name      | String | The feedback user name.  |
+    | title     | String | The page title.          |
+    | url       | String | The page URL.            |
 
   ![img_3.png](tidb_cloud_data_service_config.png)
 

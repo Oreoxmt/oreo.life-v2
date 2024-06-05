@@ -192,7 +192,7 @@ jobs:
     submodules: 'true'
 ```
 
-注意，这里如果不指定 Repo 名称，则默认是当前 Repo，也就是博客源码 Repo。此外，由于我们使用了 submoudule 来配置主题，所以 `submodules` 需要设置成 `true`。这里使用字符串的原因是似乎 [官方 README](https://github.com/actions/checkout#usage) 里写的就是个字符串，这里为了避免产生奇奇怪怪的问题所以就 follow 了。
+注意，这里如果不指定 Repo 名称，则默认是当前 Repo，也就是博客源码 Repo。此外，由于我们使用了 submodule 来配置主题，所以 `submodules` 需要设置成 `true`。这里使用字符串的原因是似乎 [官方 README](https://github.com/actions/checkout#usage) 里写的就是个字符串，这里为了避免产生奇奇怪怪的问题所以就 follow 了。
 
 第二步，配置 Node.js 环境。使用 GitHub 官方提供的 [`actions/setup-node@v1`](https://github.com/actions/setup-node) 来配置：
 

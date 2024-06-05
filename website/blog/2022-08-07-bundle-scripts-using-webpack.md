@@ -298,11 +298,11 @@ Modify the Dockerfile as follows:
       </TabItem>
       </Tabs>
 
-- The second stage is a result stage, which builds a image for production.
+- The second stage is a result stage, which builds an image for production.
 
 ## Step 4. Build the Docker image
 
-To build a image for testing, run the following command to build a `test` image:
+To build an image for testing, run the following command to build a `test` image:
 
 ```shell-session
 $ docker build -t test .

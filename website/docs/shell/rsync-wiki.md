@@ -48,7 +48,7 @@ Rsync builds an ordered list of filter rules as specified on the command-line.
 ——[Filter Rules](https://linux.die.net/man/1/rsync)
 :::
 
-在使用 [`--include`](#--includepattern) 和 [`--exclude`](#--exludepattern) 时，Rsync 的过滤规则工作原理如下：
+在使用 [`--include`](#--includepattern) 和 [`--exclude`](#--excludepattern) 时，Rsync 的过滤规则工作原理如下：
 
 1. 从命令行参数中读取 `--include` 和 `--exclude` 规则，按照命令行参数的顺序，将规则添加到过滤规则列表中。
 2. 对于每一个文件和目录，Rsync 会从过滤规则列表的头部开始，检查它是否匹配列表中的每一个模式。它会在找到第一个匹配的模式时停止。
@@ -85,7 +85,7 @@ Rsync builds an ordered list of filter rules as specified on the command-line.
 
 `--include` 选项用于指定需要同步的文件。`--include='*'` 表示同步所有文件。关于过滤规则的更多信息，参考[过滤规则](#过滤规则)。
 
-### `--exlude=PATTERN`
+### `--exclude=PATTERN`
 
 `--exclude` 选项用于指定哪些文件应该被忽略。`--exclude='*'` 表示忽略所有文件。关于过滤规则的更多信息，参考[过滤规则](#过滤规则)。
 

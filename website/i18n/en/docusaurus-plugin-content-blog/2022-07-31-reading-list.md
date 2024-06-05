@@ -5,16 +5,16 @@ authors: [Oreo]
 tags: [Reading List, Git, Tips & Tricks]
 ---
 
-My Reading List from July 16, 2022 to July 31, 2022.
+My Reading List from July 16, 2022, to July 31, 2022.
 
 ## Lists
 
-| Reading List | Inspiration | Tags |
-| :---: | :---: | :---: |
-| [Things I wish everyone knew about Git (Part I)](#git-part-1) | _The opposite of `git-push` is not `git-pull`._ | [Git](/blog/tags/git) |
-| [Things I wish everyone knew about Git (Part II)](#git-part-2) | _Good advice is commit early and often_ | [Git](/blog/tags/git) |
-| [Shell productivity tips and tricks](#shell-tips) | _We will cover some shell features you can leverage to make your shell do more of the work for you._| [Tips & Tricks](/blog/tags/Tips-Tricks) |
-| [6 deprecated Linux commands and the tools you should be using instead](#deprecated-linux-commands) | _Swap your old Linux commands for new and improved alternatives that provide the same functionality, if not more._ | [Tips & Tricks](/blog/tags/Tips-Tricks) |
+|                                            Reading List                                             |                                                    Inspiration                                                     |                  Tags                   |
+|:---------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------:|:---------------------------------------:|
+|                    [Things I wish everyone knew about Git (Part I)](#git-part-1)                    |                                  _The opposite of `git-push` is not `git-pull`._                                   |          [Git](/blog/tags/git)          |
+|                   [Things I wish everyone knew about Git (Part II)](#git-part-2)                    |                                      _Good advice is commit early and often_                                       |          [Git](/blog/tags/git)          |
+|                          [Shell productivity tips and tricks](#shell-tips)                          |        _We will cover some shell features you can leverage to make your shell do more of the work for you._        | [Tips & Tricks](/blog/tags/tips-tricks) |
+| [6 deprecated Linux commands and the tools you should be using instead](#deprecated-linux-commands) | _Swap your old Linux commands for new and improved alternatives that provide the same functionality, if not more._ | [Tips & Tricks](/blog/tags/tips-tricks) |
 
 <!--truncate-->
 
@@ -80,7 +80,7 @@ This week, I found the <kbd>Control+A</kbd> shortcut which is to go to the begin
 <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">好奇有些零碎的知识如何系统性学习。在没有一个已经系统学习过的人来带的话，感觉几乎是不可能的任务。<br/><br/>举个例子，readline<br/><br/>直到前几天我才知道，之所以ctrl+a ctrl+e 在zsh里面能进行行首和行尾的跳转，是因为有个东西叫做readline. (1 / N)</p>&mdash; whsloef (@whsloef) <a href="https://twitter.com/whsloef/status/1551586422498291712?ref_src=twsrc%5Etfw">July 25, 2022</a></blockquote>
 
 :::info quote
-The shell uses a library called [`readline`](https://tiswww.case.edu/php/chet/readline/rltop.html) to provide you with many keyboard shortcuts to navigate, edit, cut, paste, search, etc, in the command line.
+The shell uses a library called [`readline`](https://tiswww.case.edu/php/chet/readline/rltop.html) to provide you with many keyboard shortcuts to navigate, edit, cut, paste, search, etc. in the command line.
 
 The default shortcuts are inspired by the [`emacs`](https://www.gnu.org/software/emacs/) terminal-based text editor.
 

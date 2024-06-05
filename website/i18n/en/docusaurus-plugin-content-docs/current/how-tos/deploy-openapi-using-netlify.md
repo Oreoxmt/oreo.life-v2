@@ -8,7 +8,7 @@ description: "Introduce how to deploy an OpenAPI documentation using GitHub API 
 1. There is an API definition file `open-api-swagger.json` in a private repository `production/api` and I have no write access to it.
 2. I want to deploy a preview website of the `open-api-swagger.json`:
     - test some Redoc configuration in my repository `Oreoxmt/preview-api`
-    - build the `open-api-swagger.json` specification file into a HTML file `index.html` using [`redoc-cli build`](https://redocly.com/docs/redoc/deployment/cli/#redoc-cli-commands)
+    - build the `open-api-swagger.json` specification file into an HTML file `index.html` using [`redoc-cli build`](https://redocly.com/docs/redoc/deployment/cli/#redoc-cli-commands)
     - deploy it on Netlify or other services
 
 <!--truncate-->
@@ -161,9 +161,9 @@ After the step 2, you can get the JSON content of the `open-api-swagger.json` fi
 
   :::
 
-- Build the JSON file into a HTML file `index.html`.
+- Build the JSON file into an HTML file `index.html`.
 
-    To build the specification file into a HTML file, you can use the following [`redoc-cli build`](https://redocly.com/docs/redoc/deployment/cli/#redoc-cli-commands) command:
+    To build the specification file into an HTML file, you can use the following [`redoc-cli build`](https://redocly.com/docs/redoc/deployment/cli/#redoc-cli-commands) command:
 
     ```bash
     redoc-cli build openapi-spec.swagger.json -o build/index.html
@@ -187,4 +187,4 @@ After the step 2, you can get the JSON content of the `open-api-swagger.json` fi
 
     - Set the publish directory to `build`
 
-Then, you can trigger a deploy and preview the website on the **Deploys** page.
+Then, you can trigger a deployment and preview the website on the **Deploys** page.

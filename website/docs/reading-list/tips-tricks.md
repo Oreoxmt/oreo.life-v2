@@ -26,7 +26,7 @@ This week, I found the <kbd>Control+A</kbd> shortcut which is to go to the begin
 <blockquote class="twitter-tweet"><p lang="zh" dir="ltr">好奇有些零碎的知识如何系统性学习。在没有一个已经系统学习过的人来带的话，感觉几乎是不可能的任务。<br/><br/>举个例子，readline<br/><br/>直到前几天我才知道，之所以ctrl+a ctrl+e 在zsh里面能进行行首和行尾的跳转，是因为有个东西叫做readline. (1 / N)</p>&mdash; whsloef (@whsloef) <a href="https://twitter.com/whsloef/status/1551586422498291712?ref_src=twsrc%5Etfw">July 25, 2022</a></blockquote>
 
 :::info quote
-The shell uses a library called [`readline`](https://tiswww.case.edu/php/chet/readline/rltop.html) to provide you with many keyboard shortcuts to navigate, edit, cut, paste, search, etc, in the command line.
+The shell uses a library called [`readline`](https://tiswww.case.edu/php/chet/readline/rltop.html) to provide you with many keyboard shortcuts to navigate, edit, cut, paste, search, etc. in the command line.
 
 The default shortcuts are inspired by the [`emacs`](https://www.gnu.org/software/emacs/) terminal-based text editor.
 
