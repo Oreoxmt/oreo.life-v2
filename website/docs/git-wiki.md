@@ -323,6 +323,107 @@ git rebase -i {COMMIT_HASH} --signoff
 
 For more information, see [`git rebase --gpg-sign`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---gpg-signltkeyidgt) and [`git rebase --signoff`](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---signoff).
 
+### How to modify the initial commit?
+
+To modify the commit message or author information of your project's initial commit, use the `git rebase -i --root` and `git commit --amend` commands.
+
+**Scenario**: the initial commit message contains a typo and an incorrect author.
+
+1. Set up the project:
+
+    <Tabs>
+      <TabItem value="command" label="Command">
+    
+      ```shell
+      mkdir test
+      cd test
+      git init
+      git commit -m "iinit" --allow-empty
+      git log
+      ```
+    
+      </TabItem>
+      <TabItem value="output" label="Output">
+    
+      ```bash
+      Initialized empty Git repository in test/.git/
+      [main (root-commit) abcdefg] iinit
+      commit abcdefg
+      Author: ttest <ttest@ttest.com>
+    
+      iinit
+      ```
+    
+      </TabItem>
+    </Tabs>
+
+2. Start an interactive rebase and change the word "pick" to "edit" in your text editor:
+
+    <Tabs>
+      <TabItem value="command" label="Command">
+    
+      ```shell
+      git rebase -i --root
+      # edit abcdefg iinit # empty
+      ```
+    
+      </TabItem>
+      <TabItem value="output" label="Output">
+    
+      ```bash
+      Stopped at abcdefg...  iinit # empty
+      You can amend the commit now, with
+      
+        git commit --amend '-S'
+      
+      Once you are satisfied with your changes, run
+      
+        git rebase --continue
+      ```
+    
+      </TabItem>
+    </Tabs>
+
+3. Amend the commit to fix the message and author:
+
+    <Tabs>
+      <TabItem value="command" label="Command">
+    
+      ```shell
+      git commit --amend -m "init" --author="test <test@test.com>" --allow-empty
+      ```
+    
+      </TabItem>
+      <TabItem value="output" label="Output">
+    
+      ```bash
+      [detached HEAD 1234567] init
+      Author: test <test@test.com>
+      ```
+    
+      </TabItem>
+    </Tabs>
+
+4. Continue the rebase:
+
+    <Tabs>
+      <TabItem value="command" label="Command">
+    
+      ```shell
+      git rebase --continue
+      # git push --force
+      ```
+    
+      </TabItem>
+      <TabItem value="output" label="Output">
+    
+      ```bash
+      Successfully rebased and updated refs/heads/main.
+      ```
+    
+      </TabItem>
+    </Tabs>
+
 ## [`git remote`](https://git-scm.com/docs/git-remote)
 
 ### How to remove multiple remotes except for the `origin` and `upstream` remotes?
