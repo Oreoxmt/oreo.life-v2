@@ -61,7 +61,7 @@ Technical Writing:
 TiDB Cloud:
   label: 'TiDB Cloud'
   description: 'Blog posts related to TiDB Cloud'
-  permalink: /tiDB-cloud
+  permalink: /tidb-cloud
 
 Tips & Tricks:
   label: 'Tips & Tricks'
