@@ -48,6 +48,70 @@ For more details, refer to [Job Control Builtins](https://www.gnu.org/software/b
 
 :::
 
+## History expansion
+
+Bash provides a history expansion feature that enables you to recall or edit commands from the history list using [event designators](https://www.gnu.org/software/bash/manual/html_node/Event-Designators.html).
+
+The following is an example:
+
+```shell
+$ cd Projects/docs-1
+$ find . -name "TOC.md"
+./TOC.md
+$ cd ../docs-2
+
+# Refer to the command 2 lines back.
+$ !-2
+find . -name "TOC.md"
+./TOC.md
+$ history | grep "find"
+10000  find . -name "TOC.md"
+
+# Refer to command line 10000.
+$ !10000
+find . -name "TOC.md"
+./TOC.md
+```
+
+:::info quote
+
+- Use touch to create a new file called `semester` in `missing`.
+- Write the following into that file, one line at a time:
+
+    ```bash
+    #!/bin/sh
+    curl --head --silent https://missing.csail.mit.edu
+    ```
+
+    The first line might be tricky to get working. It’s helpful to know that `#` starts a comment in Bash, and `!` has a special meaning even within double-quoted (`"`) strings. Bash treats single-quoted strings (`'`) differently: they will do the trick in this case.
+
+—— [The Missing Semester of Your CS Education > Course overview + the shell > Exercises](https://missing.csail.mit.edu/2020/course-shell/)
+
+:::
+
+Using double-quoted strings here returns an error:
+
+```bash
+echo "#!/bin/sh\ncurl --head --silent https://missing.csail.mit.edu" > semester
+#sh: event not found: /bin/sh\ncurl
+```
+
+To complete this task, use the following command:
+
+```shell
+echo '#!/bin/sh\ncurl --head --silent https://missing.csail.mit.edu' > semester
+cat semester
+```
+
+The output is as follows:
+
+```shell
+#!/bin/sh
+curl --head --silent https://missing.csail.mit.edu
+```
+
+For more details, refer to [History Expansion](https://www.gnu.org/software/bash/manual/html_node/History-Interaction.html).
+
 ## Remove a substring from a string
 
 You can get more solutions from [Stackoverflow/16623835](https://stackoverflow.com/questions/16623835/remove-a-fixed-prefix-suffix-from-a-string-in-bash).
