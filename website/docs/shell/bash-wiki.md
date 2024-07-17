@@ -8,6 +8,150 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
+## Bash script execution methods
+
+| Method           | Makes script executable | Runs in current session |
+|------------------|-------------------------|-------------------------|
+| `source test.sh` | No                      | Yes                     |
+| `. test.sh`      | No                      | Yes                     |
+| `./test.sh`      | Yes                     | No                      |
+| `bash ./test.sh` | No                      | No                      |
+| `sh ./test.sh`   | No                      | No                      |
+
+## Capture or ignore the standard output (STDOUT) and standard error (STDERR) of your command
+
+This section uses the following directory structure as an example:
+
+```text
+tree .
+.
+├── bar
+│   ├── test1
+│   ├── test2
+│   └── test3
+└── foo
+    ├── test1
+    ├── test2
+    └── test3
+
+3 directories, 6 files
+```
+
+When you run `ls bar foo test`, it produces both output and error:
+
+```shell
+ls bar foo test
+#ls: test: No such file or directory
+#bar:
+#test1 test2 test3
+#
+#foo:
+#test1 test2 test3
+```
+
+- To capture `STDOUT` to the `output.txt` file while displaying `STDERR`:
+
+    ```shell
+    #highlight-next-line
+    ls bar foo test > output.txt
+    #ls: test: No such file or directory
+
+    cat output.txt
+    #bar:
+    #test1
+    #test2
+    #test3
+    #
+    #foo:
+    #test1
+    #test2
+    #test3
+    ```
+
+- To capture `STDOUT` to the `output.txt` file and capture `STDERR` to the `error.txt` file:
+
+    ```shell
+    #highlight-next-line
+    ls bar foo test > output.txt 2>error.txt
+
+    cat output.txt
+    #bar:
+    #test1
+    #test2
+    #test3
+    #
+    #foo:
+    #test1
+    #test2
+    #test3
+
+    cat error.txt
+    #ls: test: No such file or directory
+    ```
+
+- To capture both `STDOUT` and `STDERR` to the `log.txt` file:
+
+    ```shell
+    #highlight-next-line
+    ls bar foo test > log.txt 2>&1
+
+    cat log.txt
+    #ls: test: No such file or directory
+    #bar:
+    #test1
+    #test2
+    #test3
+    #
+    #foo:
+    #test1
+    #test2
+    #test3
+    ```
+
+    To append both `STDOUT` and `STDERR` to an existing log file:
+
+    ```shell
+    echo "Logs:" > log.txt
+    #highlight-next-line
+    ls bar foo test >> log.txt 2>&1
+
+    cat log.txt
+    #highlight-next-line
+    #Logs:
+    #ls: test: No such file or directory
+    #bar:
+    #test1
+    #test2
+    #test3
+    #
+    #foo:
+    #test1
+    #test2
+    #test3
+    ```
+
+- To ignore `STDOUT`:
+
+    ```shell
+    ls bar foo test > /dev/null
+    #ls: test: No such file or directory
+    ```
+
+- To ignore both `STDOUT` and `STDERR`:
+
+    ```shell
+    ls bar foo test > /dev/null 2>&1
+    ```
+
+- The following command might not work as expected:
+
+    ```shell
+    ls bar foo test 2>&1 > /dev/null
+    #ls: test: No such file or directory
+    ```
+
+    For more information, see [Stackoverflow/16283739](https://stackoverflow.com/a/16283739/22557497).
+
 ## Control operators `&` and `&&`
 
 When resolving cherry-pick conflicts on multiple branches (PRs), I often use the following command:
