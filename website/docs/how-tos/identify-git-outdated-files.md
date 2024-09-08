@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 
 为了及时发现文档仓库中可能过时的内容，你可以使用 [`git log`](https://git-scm.com/docs/git-log) 命令获取文档的最后一次更新信息，以发现长期未更新的文档。下面具体介绍如何使用 `git log` 生成指定目录下所有 Markdown 文件的最后一次 commit 信息。
 
-<!--truncate-->
+<!-- truncate -->
 
 ## 使用方法
 

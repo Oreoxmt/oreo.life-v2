@@ -7,7 +7,7 @@ tags: [Algolia, Docusaurus, GitHub Actions, Tips & Tricks, How-tos]
 
 This document introduces how to configure [Algolia DocSearch](https://docsearch.algolia.com) for your [Docusaurus](https://docusaurus.io/docs) website and crawl your website automatically using GitHub Actions.
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Step 1: Apply for Algolia DocSearch
 

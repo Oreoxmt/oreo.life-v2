@@ -24,7 +24,7 @@ Recently, I have been working on migrating a project's database from SQLite to T
 3. [Query data](#query-data) and [modify schema](#modify-schema) using the sample data
 4. [Integrate Bytebase with TiDB Cloud](#integrate-bytebase-with-tidb-cloud)
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Install Bytebase on macOS
 

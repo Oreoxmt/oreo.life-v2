@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 这篇博客记录了我跟着 [C++ Beginner's Guide](https://hackingcpp.com/cpp/beginners_guide.html) 学习 C++ 的第一天，并通过一个猜数字游戏的实践来加深对 I/O、基本数据类型、控制流等基础知识的理解。
 
-<!--truncate-->
+<!-- truncate -->
 
 ## 准备开发环境
 

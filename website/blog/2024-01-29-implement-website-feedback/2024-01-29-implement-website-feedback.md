@@ -18,7 +18,7 @@ View the demo code: [`writerside-feedback-example`](https://github.com/Oreoxmt/w
 
 Try the feedback widget: [Feedback example page](https://writerside-feedback-example.pages.dev/add-math-formulas.html)
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Prerequisites
 

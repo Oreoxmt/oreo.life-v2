@@ -18,7 +18,7 @@ while True:
         break
 ```
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Python 中获取当前时间的函数
 

@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 This document outlines how to utilize code to enhance the accuracy of configuration documentation, particularly for technical writers who might not be well-versed in coding but are responsible for creating or reviewing configuration files. By following the examples in this document, writers can ensure that their configuration files are correct, efficient, and easy to understand, while also reducing the risk of errors or inconsistencies.
 
-<!--truncate-->
+<!-- truncate -->
 
 [Documentation-driven development](https://johnsamuel.info/en/programming/documentation-driven-development.html) emphasizes the importance of creating documentation that meets the needs of users. Code-driven documentation here prioritizes the accuracy and consistency of documentation by relying on the source of truth, which is the **code** itself. By using code to verify documentation, technical writers can ensure that their documentation is up-to-date and correctly reflects the behavior of the system, which can help to reduce errors and improve the overall quality of the documentation.
 

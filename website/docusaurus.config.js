@@ -75,6 +75,7 @@ export default {
           blogSidebarCount: 'ALL',
           showReadingTime: true,
           feedOptions: {
+            xslt: true,
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} Oreo. Built with Docusaurus.`,
             createFeedItems: async (params) => {

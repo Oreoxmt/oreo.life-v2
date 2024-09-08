@@ -20,7 +20,7 @@ marimo is an open-source reactive notebook for Python — reproducible, git-frie
 
 :::
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Showcasing the tools
 

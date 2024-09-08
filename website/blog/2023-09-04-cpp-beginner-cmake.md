@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 本文介绍如何利用 CMake 来管理一个 C++ 学习项目，帮助你快速实现编译和运行。
 
-<!--truncate-->
+<!-- truncate -->
 
 ## 什么是 CMake？
 
