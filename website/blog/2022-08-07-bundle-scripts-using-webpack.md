@@ -18,7 +18,7 @@ I use [webpack](https://webpack.js.org) to bundle some JS scripts today, see [op
 - To use [JS scripts](https://github.com/Oreoxmt/openapi-scripts/tree/main/src), I build a Docker image [`ghcr.io/oreoxmt/openapi-scripts`](https://github.com/Oreoxmt/openapi-scripts/pkgs/container/openapi-scripts).
 - The Docker image is under rapid development, and it takes a long time to pull the latest image due to 3901 node modules.
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Step 1. Install `webpack-cli`
 

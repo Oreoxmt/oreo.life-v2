@@ -20,7 +20,7 @@ The basic unit of communication between a program and its environment is a _stre
 
 :::
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Overview of string stream
 

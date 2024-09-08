@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 前段时间在写 [tidbcloudy](https://github.com/Oreoxmt/tidbcloudy)（一个 TiDB Cloud Python SDK）的时候用到了 [Poetry](https://python-poetry.org) 来管理依赖以及发布到 PyPI。经历了五次小版本的迭代，感觉 Poetry 时常让我有一种“写 SDK 也不难，发版也可以很简单”的错觉，所以决定记录一下我是如何使用 Poetry 来完成我的第一个 SDK 的。
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Poetry 是什么
 

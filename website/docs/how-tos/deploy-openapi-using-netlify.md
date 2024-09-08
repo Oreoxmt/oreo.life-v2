@@ -11,7 +11,7 @@ description: "Introduce how to deploy an OpenAPI documentation using GitHub API 
     - build the `open-api-swagger.json` specification file into an HTML file `index.html` using [`redoc-cli build`](https://redocly.com/docs/redoc/deployment/cli/#redoc-cli-commands)
     - deploy it on Netlify or other services
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Step 1. Import my repository to Netlify
 

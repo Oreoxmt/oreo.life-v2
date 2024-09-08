@@ -16,7 +16,7 @@ When maintaining a Git repository, particularly one for documentation, it is com
 
 To identify potential outdated files, you can use the `git log` command to retrieve the last commit log of each file and find long-term inactive files. The following sections describe how to generate a last commit report for a repository and how to write the script step by step.
 
-<!--truncate-->
+<!-- truncate -->
 
 ## Usage
 

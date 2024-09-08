@@ -13,7 +13,7 @@ tags: [Tips & Tricks]
 
 代码获取：[github](https://github.com/Oreoxmt/Start-with-Me/tree/master/file-process)
 
-<!--truncate-->
+<!-- truncate -->
 
 # 一键下载
 

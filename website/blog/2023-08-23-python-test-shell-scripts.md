@@ -13,7 +13,7 @@ tags: [Python, Test, Shell]
 
 下面以测试 `sync_scaffold.sh` 为例，该脚本用于更新 `markdown-pages` 目录以及 `docs.json` 文件内容。
 
-<!--truncate-->
+<!-- truncate -->
 
 ## 问题拆解
 
