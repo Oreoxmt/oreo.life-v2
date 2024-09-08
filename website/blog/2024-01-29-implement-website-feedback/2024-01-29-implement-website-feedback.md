@@ -42,31 +42,31 @@ Code example: [commit/10a7107](https://github.com/Oreoxmt/writerside-feedback-ex
 
   ```yaml title=".github/workflows/deploy.yml"
   name: Build documentation
-  
+
   on:
     push:
       branches: ["main"]
     workflow_dispatch:
-  
+
   env:
     INSTANCE: writerside-feedback/hi
     ARTIFACT: webHelpHI2-all.zip
     DOCKER_VERSION: 233.14272
-  
+
   jobs:
     build:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout repository
           uses: actions/checkout@v4
-  
+
         - name: Build Writerside docs using Docker
           uses: JetBrains/writerside-github-action@v4
           with:
             instance: ${{ env.INSTANCE }}
             artifact: ${{ env.ARTIFACT }}
             docker-version: ${{ env.DOCKER_VERSION }}
-  
+
         - name: Upload documentation
           uses: actions/upload-artifact@v4
           with:
@@ -75,7 +75,7 @@ Code example: [commit/10a7107](https://github.com/Oreoxmt/writerside-feedback-ex
               artifacts/${{ env.ARTIFACT }}
               artifacts/report.json
             retention-days: 7
-  
+
     deploy:
       needs: build
       runs-on: ubuntu-latest
@@ -174,12 +174,12 @@ Therefore, it is necessary to have a server in place to receive this request and
 ## 3. Configure TiDB Cloud Data Service for feedback storage
 
 1. [Create a TiDB Serverless cluster](https://docs.pingcap.com/tidbcloud/create-tidb-cluster-serverless) and initialize the database as follows. For convenience, you can use [Chat2Query](https://docs.pingcap.com/tidbcloud/explore-data-with-chat2query) in the TiDB Cloud console.
-    
+
   ```sql
   CREATE DATABASE demo;
-  
+
   USE demo;
-  
+
   CREATE TABLE
     feedback (
       id INT PRIMARY KEY AUTO_INCREMENT,
@@ -203,7 +203,7 @@ Therefore, it is necessary to have a server in place to receive this request and
   - Set the **Path**, for example, `/feedback`.
   - Select **POST** as the **Request Method**.
   - Input the following SQL statements into the editor:
-  
+
     ```sql
     USE demo;
     INSERT INTO feedback (
@@ -215,7 +215,7 @@ Therefore, it is necessary to have a server in place to receive this request and
     ```
 
   - Configure the parameters as follows:
-  
+
     | Parameter | Type   | Description              |
     |-----------|--------|--------------------------|
     | articleId | String | The article ID.          |
@@ -271,7 +271,7 @@ Code example: https://github.com/Oreoxmt/writerside-feedback-example/commit/dd61
   This function forwards the feedback request to TiDB Cloud Data Service, which is configured in the `API_HOST` and `API_AUTH` environment variables.
 
 2. Incorporate the *Add function folder to output file* step in the `deploy.yml` workflow. After building the documentation, this step adds the `functions` folder to the output file, facilitating the deployment of the function to Cloudflare Pages.
- 
+
   ```yaml title=".github/workflows/deploy.yml"
   name: Build documentation
 

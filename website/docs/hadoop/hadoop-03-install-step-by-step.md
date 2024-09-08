@@ -36,7 +36,7 @@ Docker 采用 Linux 的容器技术实现内外环境隔离。由于 Hadoop 安�
 $ # 安装前置项
 $ sudo apt update
 $ sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-$ # 添加 Docker Repo 
+$ # 添加 Docker Repo
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 $ sudo apt update
 $ # 安装 Docker

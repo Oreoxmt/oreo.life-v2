@@ -107,15 +107,15 @@ make # This will execute the build files and build the project
   Merge: e5b1c472 20d0c586
   Author: Oreo
   Date:   Mon Sep 4 21:37:57 2023 +0800
-  
+
       Merge commit '20d0c58622d07bf66f125efff52cc440b88fe2eb' as 'thirdparty/fmt'
-  
+
   commit 20d0c58622d07bf66f125efff52cc440b88fe2eb
   Author: Oreo
   Date:   Mon Sep 4 21:37:57 2023 +0800
-  
+
       Squashed 'thirdparty/fmt/' content from commit e8259c52
-  
+
       git-subtree-dir: thirdparty/fmt
       git-subtree-split: e8259c5298513e8cdbff05ce01c46c684fe758d8
   ```
@@ -146,15 +146,15 @@ make # This will execute the build files and build the project
   Receiving objects: 100% (32886/32886), 14.09 MiB | 23.39 MiB/s, done.
   Resolving deltas: 100% (22295/22295), done.
   ```
-  
+
   查看 `git status`：
 
   ```bash
   git status
   On branch main
-  
+
   No commits yet
-  
+
   Changes to be committed:
     (use "git rm --cached <file>..." to unstage)
     new file:   .gitmodules

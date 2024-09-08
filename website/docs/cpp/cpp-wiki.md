@@ -54,7 +54,7 @@ The following code examples show the difference between using `std::endl` and no
 
   ```cpp
   #include <iostream>
-  
+
   int main() {
     for (int i = 0; i < 5; i++) {
       std::cout << i << std::endl;
@@ -74,7 +74,7 @@ The following code examples show the difference between using `std::endl` and no
 
   ```cpp
   #include <iostream>
-  
+
   int main() {
     for (int i = 0; i < 5; i++) {
       std::cout << i;  // 01234
@@ -107,9 +107,9 @@ The following code examples show the same output with `std::endl` and `\n` in st
 
   ```cpp name="std_endl.cpp"
   #include <unistd.h>
-  
+
   #include <iostream>
-  
+
   int main() {
     for (int i = 0; i < 5; i++) {
       sleep(1);
@@ -133,9 +133,9 @@ The following code examples show the same output with `std::endl` and `\n` in st
 
   ```cpp name="new_line_character.cpp"
   #include <unistd.h>
-  
+
   #include <iostream>
-  
+
   int main() {
     for (int i = 0; i < 5; i++) {
       sleep(1);
@@ -204,7 +204,7 @@ The following example shows the duration for printing 100,000 numbers with `std:
   ```cpp
   #include <chrono>    // for timers
   #include <iostream>  // for cin, cout
-  
+
   int endl_each_time(int n = 10000) {
     const auto start_time = std::chrono::steady_clock::now();
     for (int i = 0; i < n; i++) {
@@ -215,7 +215,7 @@ The following example shows the duration for printing 100,000 numbers with `std:
         end_time - start_time);
     return duration_ns.count();
   }
-  
+
   int new_line_each_time(int n = 10000) {
     const auto start_time = std::chrono::steady_clock::now();
     for (int i = 0; i < n; i++) {
@@ -227,7 +227,7 @@ The following example shows the duration for printing 100,000 numbers with `std:
                                                               start_time);
     return duration_ns.count();
   }
-  
+
   int main() {
     int endl_duration = endl_each_time();
     int new_line_duration = new_line_each_time();

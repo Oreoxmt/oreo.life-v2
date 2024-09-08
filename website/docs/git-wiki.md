@@ -333,7 +333,7 @@ To modify the commit message or author information of your project's initial com
 
     <Tabs>
       <TabItem value="command" label="Command">
-    
+
       ```shell
       mkdir test
       cd test
@@ -341,19 +341,19 @@ To modify the commit message or author information of your project's initial com
       git commit -m "iinit" --allow-empty
       git log
       ```
-    
+
       </TabItem>
       <TabItem value="output" label="Output">
-    
+
       ```bash
       Initialized empty Git repository in test/.git/
       [main (root-commit) abcdefg] iinit
       commit abcdefg
       Author: ttest <ttest@ttest.com>
-    
+
       iinit
       ```
-    
+
       </TabItem>
     </Tabs>
 
@@ -361,26 +361,26 @@ To modify the commit message or author information of your project's initial com
 
     <Tabs>
       <TabItem value="command" label="Command">
-    
+
       ```shell
       git rebase -i --root
       # edit abcdefg iinit # empty
       ```
-    
+
       </TabItem>
       <TabItem value="output" label="Output">
-    
+
       ```bash
       Stopped at abcdefg...  iinit # empty
       You can amend the commit now, with
-      
+
         git commit --amend '-S'
-      
+
       Once you are satisfied with your changes, run
-      
+
         git rebase --continue
       ```
-    
+
       </TabItem>
     </Tabs>
 
@@ -388,19 +388,19 @@ To modify the commit message or author information of your project's initial com
 
     <Tabs>
       <TabItem value="command" label="Command">
-    
+
       ```shell
       git commit --amend -m "init" --author="test <test@test.com>" --allow-empty
       ```
-    
+
       </TabItem>
       <TabItem value="output" label="Output">
-    
+
       ```bash
       [detached HEAD 1234567] init
       Author: test <test@test.com>
       ```
-    
+
       </TabItem>
     </Tabs>
 
@@ -408,19 +408,19 @@ To modify the commit message or author information of your project's initial com
 
     <Tabs>
       <TabItem value="command" label="Command">
-    
+
       ```shell
       git rebase --continue
       # git push --force
       ```
-    
+
       </TabItem>
       <TabItem value="output" label="Output">
-    
+
       ```bash
       Successfully rebased and updated refs/heads/main.
       ```
-    
+
       </TabItem>
     </Tabs>
 

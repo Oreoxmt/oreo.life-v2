@@ -95,7 +95,7 @@ MapReduce 本质上是并行运行的，因此可以将**大规模的数据**分
 #!/usr/bin/env bash
 for year in all/*
 do
-  echo -ne `basename $year .gz`"\t" 
+  echo -ne `basename $year .gz`"\t"
   gunzip -c $year | \
     awk '{ temp = substr($0, 88, 5) + 0;
            q = substr($0, 93, 1);
@@ -116,7 +116,7 @@ done
 
 - 显示年份
 
-    `echo -ne `basename $year.gz`"\t"` 
+    `echo -ne `basename $year.gz`"\t"`
 
     - echo 是显示函数
 
@@ -255,7 +255,7 @@ MapReduce 任务分为两个处理阶段：map 阶段和 reduce 阶段，每个�
 
 *因为 Linux 里的后缀名是无意义的，不像 Windows，`.py` 结尾的就会用 Python 执行，所以必须有这么一行来告诉操作系统，这是个 Python 脚本*
 
-以下是转换后的 Python3 版本，并将输出改成了 `f-string` ，应该不需要翻译 ...... 
+以下是转换后的 Python3 版本，并将输出改成了 `f-string` ，应该不需要翻译 ......
 
 `max_temperature_map.py`
 
