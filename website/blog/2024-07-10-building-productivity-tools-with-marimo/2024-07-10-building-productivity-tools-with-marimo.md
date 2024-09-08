@@ -28,15 +28,15 @@ Let's dive into the tools I built using marimo:
 
 - [**Working Day Calculator**](https://tool.oreo.life/workcalc/): parses official holiday announcements from the General Office of the State Council and generates data for annual public holidays and compensatory working days in China.
 
-    <ReactPlayer playing controls url='/img/workcalc-demo.mp4' />
+    <ReactPlayer playing controls url='/img/workcalc-demo.mp4' width="100%" height="auto" />
 
 - [**Holiday Announcement Parser**](https://tool.oreo.life/holiparse/): calculates dates before or after a specified number of working days, taking into account official public holidays and compensatory working days in China.
 
-    <ReactPlayer playing controls url='/img/holiparse-demo.mp4' />
+    <ReactPlayer playing controls url='/img/holiparse-demo.mp4' width="100%" height="auto" />
 
 - **Automatic Release Scheduler**: streamlines the product release process by automatically scheduling tasks based on a given release date.
 
-    <ReactPlayer playing controls url='/img/autosched-demo.mp4' />
+    <ReactPlayer playing controls url='/img/autosched-demo.mp4' width="100%" height="auto" />
 
 ## From idea to implementation
 
