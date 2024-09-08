@@ -47,10 +47,10 @@ class Message:
         self._tokens = Queue()
         for item in range(10):
             self._tokens.put(item)
-    
+
     def __iter__(self):
         return self
-    
+
     def __next__(self):
         next_token = self._tokens.get()
         if next_token is None:

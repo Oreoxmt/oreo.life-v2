@@ -53,11 +53,11 @@ To extract the price and unit from the string stream `iss`, use the following co
 
 <Tabs>
   <TabItem value="extract-price-double-code" label="Extract price (double) and unit">
-  
+
   ```cpp
   #include <iostream>
   #include <sstream>
-  
+
   int main() {
     std::istringstream iss("9.15 pounds.");
     std::ostringstream oss("The price of the shirt is ");
@@ -72,7 +72,7 @@ To extract the price and unit from the string stream `iss`, use the following co
 
   </TabItem>
   <TabItem value="extract-price-double-output" label="Output">
-  
+
   ```text
   The price of the shirt is 9.15 pounds.
   ```
@@ -84,11 +84,11 @@ What is the behavior of `iss >> price >> unit`? We can modify the type of `price
 
 <Tabs>
   <TabItem value="extract-price-int-code" label="Extract price (int) and unit">
-  
+
   ```cpp
   #include <iostream>
   #include <sstream>
-  
+
   int main() {
     std::istringstream iss("9.15 pounds.");
     std::ostringstream oss("The price of the shirt is ");
@@ -104,7 +104,7 @@ What is the behavior of `iss >> price >> unit`? We can modify the type of `price
 
   </TabItem>
   <TabItem value="extract-price-int-output" label="Output">
-  
+
   ```text
   The price of the shirt is 9 .15
   ```
@@ -120,18 +120,18 @@ Now, we can use `>>` to extract an integer from a string. Let's implement a func
 
 <Tabs>
   <TabItem value="string-to-int-first" label="Extract an integer from a string">
-  
+
   ```cpp name="stringToInteger.cpp"
   #include <iostream>
   #include <sstream>
-  
+
   int stringToInteger(const std::string& str) {
     std::istringstream iss(str);
     int value;
     iss >> value;
     return value;
   }
-  
+
   int main() {
     std::string str = "123";
     int value = stringToInteger(str);
@@ -143,7 +143,7 @@ Now, we can use `>>` to extract an integer from a string. Let's implement a func
 
   </TabItem>
   <TabItem value="string-to-int-first-output" label="Output">
-  
+
   ```text
   The value is: 123
   ```
@@ -166,12 +166,12 @@ To check the stream state, we can use the `good()`, `eof()`, `fail()`, and `bad(
 
 <Tabs>
   <TabItem value="stream-state-code" label="Check stream state">
-  
+
   ```cpp
   #include <iostream>
   #include <sstream>
   #include <vector>
-  
+
   void get_stream_state(std::istringstream &iss) {
     if (iss.good()) {
       std::cout << "G";
@@ -187,7 +187,7 @@ To check the stream state, we can use the `good()`, `eof()`, `fail()`, and `bad(
     }
     std::cout << std::endl;
   }
-  
+
   int stringToInteger(const std::string &str) {
     std::istringstream iss(str);
     std::cout << "Before: ";
@@ -198,7 +198,7 @@ To check the stream state, we can use the `good()`, `eof()`, `fail()`, and `bad(
     get_stream_state(iss);
     return value;
   }
-  
+
   int main() {
     std::vector<std::string> test_strings{"123", "123abc", "abc123", ""};
     for (const auto &str : test_strings) {
@@ -212,7 +212,7 @@ To check the stream state, we can use the `good()`, `eof()`, `fail()`, and `bad(
 
   </TabItem>
   <TabItem value="stream-state-output" label="Output">
-  
+
   ```text
   stringToInteger("123"):
   Before: G
