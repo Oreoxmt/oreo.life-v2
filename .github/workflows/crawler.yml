@@ -10,7 +10,7 @@ jobs:
       - name: Sleep for 15s
         run: sleep 15
       - name: Algolia Crawler Automatic Crawl
-        uses: algolia/algoliasearch-crawler-github-actions@v1.10.0
+        uses: algolia/algoliasearch-crawler-github-actions@v1.1.13
         with:
           crawler-user-id: ${{ secrets.ALGOLIA_CRAWLER_USER_ID }}
           crawler-api-key: ${{ secrets.ALGOLIA_CRAWLER_API_KEY }}
