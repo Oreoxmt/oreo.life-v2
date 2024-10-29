@@ -26,11 +26,11 @@ marimo is an open-source reactive notebook for Python — reproducible, git-frie
 
 Let's dive into the tools I built using marimo:
 
-- [**Working Day Calculator**](https://tool.oreo.life/workcalc/): parses official holiday announcements from the General Office of the State Council and generates data for annual public holidays and compensatory working days in China.
+- [**Working Day Calculator**](https://tool.oreo.life/workcalc/): calculates dates before or after a specified number of working days, taking into account official public holidays and compensatory working days in China.
 
     <ReactPlayer playing controls url='/img/workcalc-demo.mp4' width="100%" height="auto" />
 
-- [**Holiday Announcement Parser**](https://tool.oreo.life/holiparse/): calculates dates before or after a specified number of working days, taking into account official public holidays and compensatory working days in China.
+- [**Holiday Announcement Parser**](https://tool.oreo.life/holiparse/): parses official holiday announcements from the General Office of the State Council and generates data for annual public holidays and compensatory working days in China.
 
     <ReactPlayer playing controls url='/img/holiparse-demo.mp4' width="100%" height="auto" />
 
