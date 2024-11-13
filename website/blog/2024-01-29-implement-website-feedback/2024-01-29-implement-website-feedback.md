@@ -1,5 +1,5 @@
 ---
-slug: 2024-01-29-implement-website-feedback-implement-website-feedback
+slug: 2024-01-29-implement-website-feedback
 title: "Enable User Feedback in Writerside Using TiDB Cloud and Cloudflare Pages"
 authors: [Oreo]
 tags: [Technical Writing, How-tos, Cloudflare Functions, TiDB Cloud, Writerside]
