@@ -5,6 +5,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 export default {
+  future: {
+    experimental_faster: true,
+  },
   title: 'On my way to Oodi',
   tagline: '"Siempre imaginé que el paraíso sería algún tipo de biblioteca"',
   url: 'https://oreo.life',
