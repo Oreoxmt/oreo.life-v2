@@ -66,6 +66,7 @@ const sidebars = {
       },
       items: [
         'python/time-in-python',
+        'python/python-negative-division',
         'python/python-iterator',
         'how-tos/python-test-shell-scripts',
         'how-tos/manage-python-project-using-poetry',
