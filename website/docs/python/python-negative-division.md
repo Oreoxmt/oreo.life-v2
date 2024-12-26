@@ -21,9 +21,7 @@ Here's the Python function where the issue occurs:
 
 ```python
 def int_to_float(value: int, decimal: int):
-    exp = 1
-    for _ in range(decimal):
-        exp = exp * 10
+    exp = 10 ** decimal
     return f"{value // exp:,}.{str(value % exp).zfill(decimal)}"
 
 print(int_to_float(100, 2))  # 1.00
@@ -133,9 +131,7 @@ The following is an updated version of the function that correctly handles negat
 
 ```python
 def int_to_float(value: int, decimal: int):
-    exp = 1
-    for _ in range(decimal):
-        exp = exp * 10
+    exp = 10 ** decimal
     if value < 0:
         value = -value
         sign = "-"
