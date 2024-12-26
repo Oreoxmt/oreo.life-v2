@@ -2,6 +2,8 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 export default {
@@ -19,6 +21,13 @@ export default {
   stylesheets: [
       {
           href: "https://unpkg.com/@antonz/codapi@0.19.7/dist/snippet.css",
+      },
+      {
+          href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+          type: 'text/css',
+          integrity:
+            'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+          crossorigin: 'anonymous',
       },
   ],
   scripts: [
@@ -70,6 +79,8 @@ export default {
           // Remove this to remove the "edit this page" links.
           editUrl:
               'https://github.com/Oreoxmt/oreo.life-v2',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           blogTitle: "Oreo's blog",
@@ -77,6 +88,8 @@ export default {
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
           showReadingTime: true,
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           feedOptions: {
             xslt: true,
             type: 'all',
