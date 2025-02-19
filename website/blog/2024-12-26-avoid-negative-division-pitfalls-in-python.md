@@ -18,7 +18,7 @@ To my surprise, when I attempted to convert -155 back to -1.55, Python returned 
 
 <!-- truncate -->
 
-### The unexpected behavior
+## The unexpected behavior
 
 Here's the Python function where the issue occurs:
 
