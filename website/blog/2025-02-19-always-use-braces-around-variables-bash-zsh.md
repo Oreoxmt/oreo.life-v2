@@ -18,6 +18,7 @@ While setting up [`rclone`](https://rclone.org) to connect to a Tencent Cloud st
 export TENCENTCLOUD_SECRET_ID=1234
 export TENCENTCLOUD_SECRET_KEY=1234
 rclone ls ":s3,endpoint=cos.ap-seoul.myqcloud.com,access_key_id=$TENCENTCLOUD_SECRET_ID,secret_access_key=$TENCENTCLOUD_SECRET_KEY:api/"
+
 # highlight-next-line
 CRITICAL: Failed to create file system for ":s3,endpoint=cos.ap-seoul.myqcloud.com,access_key_id=1234,secret_access_key=/Users/test/1234pi/": unquoted config value must end with `,` or `:`
 ```
@@ -84,8 +85,9 @@ echo $A:a
 
 The solution turned out to be straightforward: adding braces `{}` around the variable names resolved the issue. The following is the corrected command:
 
-```shell
-rclone ls ":s3,endpoint=cos.ap-seoul.myqcloud.com,access_key_id=${TENCENTCLOUD_SECRET_ID},secret_access_key=${TENCENTCLOUD_SECRET_KEY}:api/"
+```diff
+- rclone ls ":s3,endpoint=cos.ap-seoul.myqcloud.com,access_key_id=$TENCENTCLOUD_SECRET_ID,secret_access_key=$TENCENTCLOUD_SECRET_KEY:api/"
++ rclone ls ":s3,endpoint=cos.ap-seoul.myqcloud.com,access_key_id=${TENCENTCLOUD_SECRET_ID},secret_access_key=${TENCENTCLOUD_SECRET_KEY}:api/"
 ```
 
 With the braces in place, `${TENCENTCLOUD_SECRET_KEY}:api/` is correctly parsed as `1234:api/`. The `:a` is no longer within the parameter expansion and is treated as a literal string.
