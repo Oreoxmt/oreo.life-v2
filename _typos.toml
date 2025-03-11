@@ -3,3 +3,4 @@
 
 [default.extend-identifiers]
 levlSkipRequest = "levlSkipRequest"
+ERRO = "ERRO"
