@@ -157,7 +157,7 @@ After the step 2, you can get the JSON content of the `open-api-swagger.json` fi
   $(echo "upg")
   ```
 
-  —— [Stack Overflow](https://stackoverflow.com/a/6697781)
+  —[Stack Overflow](https://stackoverflow.com/a/6697781)
 
   :::
 

@@ -72,7 +72,7 @@ How often will DocSearch crawl my website?
 
 Crawls are scheduled at a random time once a week. You can [configure this schedule from the config file](https://www.algolia.com/doc/tools/crawler/apis/configuration/schedule/) or trigger one manually from [the Crawler interface](https://crawler.algolia.com/).
 
-——[Algolia Support](https://support.algolia.com/hc/en-us/articles/10156769900945-How-often-will-DocSearch-crawl-my-website-)
+—[Algolia Support](https://support.algolia.com/hc/en-us/articles/10156769900945-How-often-will-DocSearch-crawl-my-website-)
 
 :::
 

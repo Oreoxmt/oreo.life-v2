@@ -229,7 +229,7 @@ find . -name "TOC.md"
 
     The first line might be tricky to get working. It’s helpful to know that `#` starts a comment in Bash, and `!` has a special meaning even within double-quoted (`"`) strings. Bash treats single-quoted strings (`'`) differently: they will do the trick in this case.
 
-—— [The Missing Semester of Your CS Education > Course overview + the shell > Exercises](https://missing.csail.mit.edu/2020/course-shell/)
+—[The Missing Semester of Your CS Education > Course overview + the shell > Exercises](https://missing.csail.mit.edu/2020/course-shell/)
 
 :::
 

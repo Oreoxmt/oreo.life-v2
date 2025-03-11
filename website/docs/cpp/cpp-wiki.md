@@ -96,7 +96,7 @@ In standard output, `\n` usually has the same effect as `std::endl`, that is, it
 
 In many implementations, standard output is **line-buffered**, and writing `\n` causes a flush anyway, unless `std::ios::sync_with_stdio(false)` was executed. In those situations, unnecessary `endl` only degrades the performance of file output, not standard output.
 
-—— [C++ reference: std:endl](https://en.cppreference.com/w/cpp/io/manip/endl)
+—[C++ reference: std:endl](https://en.cppreference.com/w/cpp/io/manip/endl)
 
 :::
 

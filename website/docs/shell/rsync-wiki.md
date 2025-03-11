@@ -45,7 +45,7 @@ As the list of files/directories to transfer is built, rsync checks each name to
 
 Rsync builds an ordered list of filter rules as specified on the command-line.
 
-——[Filter Rules](https://linux.die.net/man/1/rsync)
+—[Filter Rules](https://linux.die.net/man/1/rsync)
 :::
 
 在使用 [`--include`](#--includepattern) 和 [`--exclude`](#--excludepattern) 时，Rsync 的过滤规则工作原理如下：
