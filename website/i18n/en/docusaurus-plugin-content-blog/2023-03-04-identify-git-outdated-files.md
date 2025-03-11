@@ -258,7 +258,7 @@ cd docs
 
     For loops over find output are fragile. Use `find -exec` or a `while read` loop.
 
-    —— [SC2044: ShellCheck Wiki](https://www.shellcheck.net/wiki/SC2044)
+    —[SC2044: ShellCheck Wiki](https://www.shellcheck.net/wiki/SC2044)
     :::
 
     To avoid this issue, you can use the `while read -r` loop to iterate all `.md` files:

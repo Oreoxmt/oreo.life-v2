@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 
 :::info quote
 Bytebase is an open-source database DevOps tool, it's the GitLab for managing databases throughout the application development lifecycle. It offers a web-based workspace for DBAs and Developers to collaborate and manage the database change safely and efficiently.
-——[What is Bytebase](https://www.bytebase.com/docs/introduction/what-is-bytebase)
+—[What is Bytebase](https://www.bytebase.com/docs/introduction/what-is-bytebase)
 :::
 
 Recently, I have been working on migrating a project's database from SQLite to TiDB Cloud. To facilitate the management of database changes, I decided to use a database DevOps tool and discovered [Bytebase](https://www.bytebase.com/). As a new user, I will share my first experience with Bytebase as I tackle the following tasks:

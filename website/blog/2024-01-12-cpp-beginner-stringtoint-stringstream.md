@@ -16,7 +16,7 @@ During the CS 106L course, I learned a lot of C++ streams. This document describ
 
 The basic unit of communication between a program and its environment is a _stream_. A stream is a channel between a _source_ and _destination_ which allows the source to push formatted data to the destination.
 
-—— [CS 106L Course Reader](https://web.stanford.edu/class/cs106l/full_course_reader.pdf)
+—[CS 106L Course Reader](https://web.stanford.edu/class/cs106l/full_course_reader.pdf)
 
 :::
 

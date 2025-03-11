@@ -56,7 +56,7 @@ Note that the Zsh Development Group accepts no responsibility for any brain dama
 
     Any modifiers, as specified by a trailing `#`, `%`, `/` (possibly doubled) or by a set of modifiers of the form `:...`, are applied to the words of the value at this level.
 
-—— [Zsh Parameter Expansion Rules](https://zsh.sourceforge.io/Doc/Release/Expansion.html#Rules)
+—[Zsh Parameter Expansion Rules](https://zsh.sourceforge.io/Doc/Release/Expansion.html#Rules)
 
 :::
 
