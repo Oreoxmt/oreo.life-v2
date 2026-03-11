@@ -1,3 +1,8 @@
+AI:
+  label: 'AI'
+  description: 'Blog posts related to AI'
+  permalink: /ai
+
 C++:
   label: 'C++'
   description: 'Blog posts related to C++'
