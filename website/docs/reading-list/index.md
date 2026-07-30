@@ -1,6 +1,6 @@
 ---
 title: Oreo's Reading List
-slug: /reading-list
+slug: /reading-list/archive
 ---
 
 |                                                          Reading List                                                           |                                                    Inspiration                                                     |                  Tags                   |
