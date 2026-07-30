@@ -1,0 +1,93 @@
+import {
+  ReadingItem,
+  ReadingShelf,
+} from '@site/src/components/ReadingList';
+
+<ReadingShelf id="currently-reading" title="Currently reading">
+   <ReadingItem
+    title="The Last Lecture"
+    author="Randy Pausch · Jeffrey Zaslow"
+    topic="Life"
+    type="Book"
+    summary="A dying professor on childhood dreams and how to spend the time you have."
+    href="https://openlibrary.org/works/OL7952998W/The_Last_Lecture"
+    isbn="9781401323257"
+  />
+</ReadingShelf>
+
+<ReadingShelf id="finished" title="Finished">
+  <ReadingItem
+    title="Conflict-free Replicated Data Types"
+    author="Marc Shapiro, Nuno Preguiça, Carlos Baquero, and Marek Zawirski"
+    topic="Distributed Systems"
+    type="Essay"
+    summary="How replicas can converge on the same state without coordination."
+    href="https://arxiv.org/pdf/1805.06358"
+    cover="ink"
+    finishedOn="2026-07"
+  />
+  <ReadingItem
+    title="Microcopy: The Complete Guide"
+    author="Kinneret Yifrah"
+    topic="Design"
+    type="Book"
+    summary="How the smallest words in an interface shape the way it feels."
+    href="https://www.microcopybook.com/"
+    cover="clay"
+    finishedOn="2025-06"
+  />
+  <ReadingItem
+    title="Product-Led Onboarding"
+    author="Ramli John"
+    topic="Product"
+    type="Book"
+    summary="How to turn new users into lifelong customers."
+    href="https://productled.com/book/onboarding"
+    cover="sand"
+    finishedOn="2025-11"
+  />
+  <ReadingItem
+    title="Things I wish everyone knew about Git"
+    author="Mark Dominus · Part I"
+    topic="Version Control"
+    type="Essay"
+    summary="Why Git makes more sense when you understand the model behind the commands."
+    href="https://blog.plover.com/prog/git/tips.html"
+    notesHref="/reading-list/git#git-part-1"
+    cover="moss"
+    finishedOn="2022-07"
+  />
+  <ReadingItem
+    title="Things I wish everyone knew about Git"
+    author="Mark Dominus · Part II"
+    topic="Version Control"
+    type="Essay"
+    summary="A practical case for committing often and knowing how to use reflog."
+    href="https://blog.plover.com/prog/git/tips-2.html"
+    notesHref="/reading-list/git#git-part-2"
+    cover="ink"
+    finishedOn="2022-07"
+  />
+  <ReadingItem
+    title="Shell productivity tips and tricks"
+    author="Balthazar Rouberol"
+    topic="Command Line"
+    type="Post"
+    summary="Small shortcuts that make everyday shell work faster."
+    href="https://blog.balthazar-rouberol.com/shell-productivity-tips-and-tricks.html"
+    notesHref="/reading-list/tips-tricks#shell-tips"
+    cover="clay"
+    finishedOn="2022-07"
+  />
+  <ReadingItem
+    title="Six deprecated Linux commands"
+    author="Don Watkins"
+    topic="Command Line"
+    type="Post"
+    summary="Modern replacements for familiar Linux commands."
+    href="https://www.redhat.com/sysadmin/deprecated-linux-command-replacements"
+    notesHref="/reading-list/tips-tricks#deprecated-linux-commands"
+    cover="sand"
+    finishedOn="2022-07"
+  />
+</ReadingShelf>

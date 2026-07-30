@@ -153,6 +153,11 @@ export default {
               position: 'right'
             },
             {
+              to: '/reading-list',
+              label: 'Reading List',
+              position: 'right',
+            },
+            {
               href: 'https://github.com/Oreoxmt',
               label: 'GitHub',
               position: 'right',
