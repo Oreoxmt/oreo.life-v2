@@ -42,6 +42,11 @@ export default {
       'data-performance': true
     },
     {
+      src: 'https://umm.oreo.life/recorder.js',
+      defer: true,
+      'data-website-id': '7a07d44e-77c0-43c5-aaa3-5071404be998',
+    },
+    {
       src: "https://unpkg.com/@antonz/codapi@0.19.7/dist/snippet.js",
       defer: true,
     },
