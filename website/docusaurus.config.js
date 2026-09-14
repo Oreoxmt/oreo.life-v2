@@ -38,12 +38,8 @@ export default {
     {
       src: 'https://umm.oreo.life/juicy.js',
       async: true,
-      'data-website-id': '7a07d44e-77c0-43c5-aaa3-5071404be998'
-    },
-    {
-      src: 'https://umm-ecru.vercel.app/script.js',
-      async: true,
-      'data-website-id': '31f5eed6-f04a-46bd-be6a-2452fdb374b8'
+      'data-website-id': '7a07d44e-77c0-43c5-aaa3-5071404be998',
+      'data-performance': true
     },
     {
       src: "https://unpkg.com/@antonz/codapi@0.19.7/dist/snippet.js",
